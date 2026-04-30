@@ -5,8 +5,6 @@ import torchvision
 import torch.nn as nn
 import torch.nn.functional as F
 from const import *
-from models.decnet import *
-from models.oneshot import *
 from tqdm import tqdm
 from collections import Counter
 from sklearn.model_selection import train_test_split
