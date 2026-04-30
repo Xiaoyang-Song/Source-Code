@@ -1,0 +1,62 @@
+Likely running on a server
+Counter({1: 2544, 0: 2456})
+Counter({1: 2504, 0: 2496})
+Validation set size: 1964
+torch.Size([1964, 1, 32, 32]) torch.Size([1964, 1, 16])
+torch.Size([1964, 6]) torch.Size([1964, 6])
+(1964, 6) (1964, 6)
+torch.Size([492, 1, 32, 32]) torch.Size([492, 1, 16])
+torch.Size([492, 6]) torch.Size([492, 6])
+(492, 6) (492, 6)
+torch.Size([5000, 1, 32, 32]) torch.Size([5000, 1, 16])
+torch.Size([5000, 6]) torch.Size([5000, 6])
+(5000, 6) (5000, 6)
+Merged Regime...
+Bootstrap sample size:  2000
+Test set size:  2000
+>> Mean correlations:  4.734
+>> Std correlations:  0.607
+
+Normal as test.
+Test set size:  1000
+Mean correlations:  4.54
+acc:  0.909
+
+Abormal as test.
+Test set size:  1000
+Mean correlations:  3.359
+acc:  0.844
+
+False Alarm Rate:  9.1
+Mis-Detection Rate:  15.6
+F1:  87.235
+Baseline...
+Baseline model loaded successfully
+Test set:  Counter({1: 2504, 0: 2496})
+Test ACC: 0.5158
+Test - Truth: {1: 2504, 0: 2496}
+Test - Predictions: {0: 4483, 1: 517}
+Test - Confusion Matrix: 
+[[2279  217]
+ [2204  300]]
+Test - False Alarm: 0.0869
+Test - Mis-Detection: 0.8802
+Start testing windowed data...
+Mean False Alarms: 
+8.767999999999999
+Mean Mis Detections: 
+88.25
+Mean F1: 
+10.74
+================================================================================
+Hotelling T2
+================================================================================
+DCCA
+Phase I data shape: (1000, 40, 6)
+UCL: 12.60718371856499.
+False Alarms: 
+1.5
+Mis Detections: 
+99.5
+F1: 
+0.98

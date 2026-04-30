@@ -1,0 +1,76 @@
+DCCA training logs
+================================================================================
+Command: run/main_dcca.py --dset=1Dr, 4D, 4B --lr=0.0005 --n_epochs=500 --bsz_tri=8 --bsz_val=8 --h=6 --normalize --n_log=1 --tag=0_h=6 --ct_ckpt_name=0-h=6
+================================================================================
+Namespace(dset=['1Dr', '4D', '4B'], normalize=True, GL=False, h=6, lr=0.0005, lr_step=1000, n_epochs=500, bsz_tri=8, bsz_val=8, tv_ratio=0.2, ckpt_name=None, ct_ckpt_name='0-h=6', sp_ckpt_name=None, n_log=1, tag='0_h=6')
+================================================================================
+================================================================================
+-- Current Device: NVIDIA RTX A4000
+-- Device Total Memory: 15.99 GB
+-- Let's use 1 GPUs!
+================================================================================
+
+================================================================================
+Experiment Configuration
+>> Dataset: ['1Dr', '4D', '4B']
+>> Learning rate: 0.0005
+>> Learning rate scheduler step: 1000
+>> Max epochs: 500
+>> Batch size (tri): 8
+>> Batch size (val): 8
+>> Train-Val Ratio: 0.2
+>> Pretrained checkpoint: None
+>> File identifier: 0_h=6
+================================================================================
+
+================================================================================
+Datast Loading
+------------------------------------------------------------
+Reading data...
+>> Reading part 1Dr...
+---- Spectra Shape: (2038, 7376)
+>> Reading part 4D...
+---- Spectra Shape: (2038, 6859)
+>> Reading part 4B...
+---- Spectra Shape: (2038, 6759)
+------------------------------------------------------------
+------------------------------------------------------------
+Processing data
+>> Locating active signals for part 1Dr.
+---- The length of active signals is: 942
+---- S: [ 272. 3252. 6221.]
+---- E: [1225. 4194. 7175.]
+---- Processed signal shape: (2038, 942, 3)
+>> Locating active signals for part 4D.
+---- The length of active signals is: 682
+---- S: [ 223. 2932. 5642.]
+---- E: [ 905. 3614. 6324.]
+---- Processed signal shape: (2038, 682, 3)
+>> Locating active signals for part 4B.
+---- The length of active signals is: 681
+---- S: [ 246. 2955. 5664.]
+---- E: [ 927. 3637. 6346.]
+---- Processed signal shape: (2038, 681, 3)
+------------------------------------------------------------
+------------------------------------------------------------
+Gathering data from different parts
+>> Gathering part 1Dr...
+---- Spectra Shape: torch.Size([942, 32, 3])
+>> Gathering part 4D...
+---- Spectra Shape: torch.Size([682, 32, 3])
+>> Gathering part 4B...
+---- Spectra Shape: torch.Size([681, 32, 3])
+>> Finished gathering data from parts ['1Dr', '4D', '4B'].
+---- 2305 spectra windows of size 5 in total.
+---- Data shape: (2305, 32, 3)
+Reading part 1Dr...
+Number of samples: 4046
+Reading part 4D...
+Number of samples: 3901
+Reading part 4B...
+Number of samples: 4751
+Finished gathering data from parts ['1Dr', '4D', '4B'].
+12698 CT scan images in total.
+>> No Spectra encoder checkpoints loaded.
+>> CT scan encoder checkpoint 0-h=6 loaded successfully!
+>> No DCCA checkpoints loaded.

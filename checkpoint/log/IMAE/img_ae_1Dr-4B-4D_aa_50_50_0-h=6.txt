@@ -1,0 +1,27 @@
+Image Autoencoder training logs
+================================================================================
+Command: run/img_ae.py --dset=1Dr-4B-4D_aa_50_50 --lr=0.001 --lr_step=2000 --n_epochs=3000 --bsz_tri=128 --bsz_val=128 --h=6 --tag=0-h=6
+================================================================================
+Namespace(dset=['1Dr-4B-4D_aa_50_50'], n_non_defects=100, GL=False, h=6, lr=0.001, lr_step=2000, n_epochs=3000, bsz_tri=128, bsz_val=128, tv_ratio=0.1, ckpt_name=None, tag='0-h=6')
+================================================================================
+================================================================================
+-- Current Device: NVIDIA RTX A4000
+-- Device Total Memory: 15.99 GB
+-- Let's use 1 GPUs!
+================================================================================
+
+================================================================================
+Experiment Configuration
+>> Dataset: ['1Dr-4B-4D_aa_50_50']
+>> Learning rate: 0.001
+>> Learning rate scheduler step: 2000
+>> Max epochs: 3000
+>> Batch size (tri): 128
+>> Batch size (val): 128
+>> Train-Val Ratio: 0.1
+>> Pretrained checkpoint: None
+>> File identifier: 0-h=6
+================================================================================
+
+================================================================================
+Datast Loading

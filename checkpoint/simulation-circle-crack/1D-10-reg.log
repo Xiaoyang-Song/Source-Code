@@ -1,0 +1,59 @@
+Counter({1: 1299, 0: 1201})
+Validation set size: 252
+torch.Size([252, 1, 32, 32]) torch.Size([252, 1, 16])
+torch.Size([252, 1]) torch.Size([252, 1])
+(252,) (252,)
+torch.Size([2500, 1, 32, 32]) torch.Size([2500, 1, 16])
+torch.Size([2500, 1]) torch.Size([2500, 1])
+(2500,) (2500,)
+Merged...
+Bootstrap mean:  0.9269303082471849
+Normal as test.
+Test set size:  1000
+Mean correlations:  0.954
+acc:  0.998
+
+Abormal as test.
+Test set size:  1000
+Mean correlations:  0.803
+acc:  0.011
+
+False Alarm Rate:  0.2
+Mis-Detection Rate:  98.9
+F1:  2.172
+
+Adjusted threshold for Type I error 0.05:  0.5794983244573353
+False Alarms:  5.0
+Mis Detections:  97.7
+F1:  4.287
+Baseline...
+Baseline model loaded successfully
+Test set:  Counter({1: 1299, 0: 1201})
+Test ACC: 0.7816
+Test - Truth: {1: 1299, 0: 1201}
+Test - Predictions: {1: 761, 0: 1739}
+Test - Confusion Matrix: 
+[[1197    4]
+ [ 542  757]]
+Test - False Alarm: 0.0033
+Test - Mis-Detection: 0.4172
+Start testing windowed data...
+False Alarms: 
+[8.8 0.1 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+ 0.  0.  0.  0.  0.  0.  0. ]
+Mis Detections: 
+[  0.    0.    0.    0.    0.    0.    0.1   0.3   0.9   2.6   4.4  10.
+  17.6  30.3  47.8  63.   76.   87.1  94.3  97.4  99.4  99.7  99.9 100.
+ 100. ]
+F1: 
+[ 95.785  99.95  100.    100.    100.    100.     99.95   99.85   99.548
+  98.683  97.751  94.737  90.351  82.145  68.594  54.015  38.71   22.852
+  10.785   5.068   1.193   0.598   0.2     0.      0.   ]
+Mean False Alarms: 
+0.356
+Mean Mis Detections: 
+41.232
+Mean F1: 
+62.431000000000004
+================================================================================
+Hotelling T2

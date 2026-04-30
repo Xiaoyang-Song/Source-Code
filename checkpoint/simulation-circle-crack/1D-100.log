@@ -1,0 +1,55 @@
+Counter({1: 1299, 0: 1201})
+torch.Size([252, 1, 32, 32]) torch.Size([252, 1, 16])
+torch.Size([252, 1]) torch.Size([252, 1])
+(252,) (252,)
+torch.Size([2500, 1, 32, 32]) torch.Size([2500, 1, 16])
+torch.Size([2500, 1]) torch.Size([2500, 1])
+(2500,) (2500,)
+Merged...
+Bootstrap mean:  0.9821671850312446
+Normal as test.
+Test set size:  1000
+Mean correlations:  0.987
+acc:  1.0
+
+Abormal as test.
+Test set size:  1000
+Mean correlations:  0.795
+acc:  0.973
+
+False Alarm Rate:  0.0
+Mis-Detection Rate:  2.7
+F1:  98.63199999999999
+
+Adjusted threshold for Type I error 0.05:  0.973199083920607
+False Alarms:  5.0
+Mis Detections:  0.0
+F1:  97.56099999999999
+Baseline...
+Baseline model loaded successfully
+Test set:  Counter({1: 1299, 0: 1201})
+Test ACC: 0.9076
+Test - Truth: {1: 1299, 0: 1201}
+Test - Predictions: {1: 1084, 0: 1416}
+Test - Confusion Matrix: 
+[[1193    8]
+ [ 223 1076]]
+
+Test - False Alarm: 0.0067
+Test - Mis-Detection: 0.1717
+False Alarms: 
+[16.  1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+  0.  0.  0.  0.  0.  0.  0.]
+Mis Detections: 
+[ 0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.1
+  0.2  0.7  2.1  4.8 10.9 24.1 40.7 62.4 81.9 94.3 99.3]
+F1: 
+[ 92.593  99.502 100.    100.    100.    100.    100.    100.    100.
+ 100.    100.    100.    100.     99.95   99.9    99.649  98.939  97.541
+  94.236  86.299  74.451  54.651  30.652  10.785   1.39 ]
+Mean False Alarms: 
+0.6799999999999999
+Mean Mis Detections: 
+16.86
+Mean F1: 
+85.622

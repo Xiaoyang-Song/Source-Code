@@ -1,0 +1,163 @@
+import torch
+import numpy as np
+from torchinfo import summary
+import torchvision
+import torch.nn as nn
+import torch.nn.functional as F
+from const import *
+from tqdm import tqdm
+
+# Credit: Architecture of Encoder and Decoder are borrowed frm Yanze Liu
+
+
+class Encoder(nn.Module):
+    def __init__(self, hidden):
+        super().__init__()
+        self.conv2d1 = nn.Conv2d(1, 16, kernel_size=(7, 7), padding=(3, 3))
+        self.maxpool2d1 = nn.MaxPool2d((3, 3), return_indices=True)
+        self.conv2d2 = nn.Conv2d(16, 8, kernel_size=(7, 7), padding=(3, 3))
+        self.maxpool2d2 = nn.MaxPool2d((3, 3), return_indices=True)
+        self.flatten = nn.Flatten()
+        self.linear1 = nn.Linear(in_features=17496, out_features=2560)
+        self.linear2 = nn.Linear(in_features=2560, out_features=128)
+        self.linear3 = nn.Linear(in_features=128, out_features=64)
+        self.linear4 = nn.Linear(in_features=64, out_features=hidden)
+
+    def forward(self, x):
+        batch_size = x.shape[0]
+        output = F.relu(self.conv2d1(x))
+        output, indices1 = self.maxpool2d1(output)
+        output = F.relu(self.conv2d2(output))
+        output, indices2 = self.maxpool2d2(output)
+        output = self.flatten(output)
+        output = F.relu(self.linear1(output))
+        output = F.relu(self.linear2(output))
+        output = F.relu(self.linear3(output))
+        output = self.linear4(output)
+        return output, indices1, indices2
+
+
+class Decoder(nn.Module):
+    def __init__(self, hidden):
+        super().__init__()
+        self.linear1 = nn.Linear(hidden, 64)
+        self.linear2 = nn.Linear(64, 128)
+        self.linear3 = nn.Linear(128, 2560)
+        self.linear4 = nn.Linear(2560, 17496)
+        self.maxunpool2d1 = nn.MaxUnpool2d((3, 3))
+        self.conv2d1 = nn.ConvTranspose2d(
+            8, 16, kernel_size=(7, 7), padding=(3, 3))
+        self.maxunpool2d2 = nn.MaxUnpool2d((3, 3))
+        self.conv2d2 = nn.ConvTranspose2d(
+            16, 1, kernel_size=(7, 7), padding=(3, 3))
+        self.sigmoid1 = nn.Sigmoid()
+
+    def forward(self, x, indices1, indices2):
+        output = F.relu(self.linear1(x))
+        output = F.relu(self.linear2(output))
+        output = F.relu(self.linear3(output))
+        output = F.relu(self.linear4(output))
+        output = output.view((output.shape[0], 8, 27, 81))
+        output = self.maxunpool2d1(
+            output, indices2, output_size=torch.Size([output.shape[0], 8, 83, 243]))
+        output = F.relu(self.conv2d1(output))
+        output = self.maxunpool2d2(output, indices1, output_size=torch.Size([
+                                   output.shape[0], 16, 250, 730]))
+        output = self.conv2d2(output)
+        output = self.sigmoid1(output)
+        return output
+
+
+class AutoEncoder(nn.Module):
+    def __init__(self, hidden_dim):
+        super().__init__()
+        self.encoder = Encoder(hidden_dim)
+        self.decoder = Decoder(hidden_dim)
+
+    def forward(self, x):
+        output, indc1, indc2 = self.encoder(x)
+        output = self.decoder(output, indc1, indc2)
+        return output
+
+
+def train_autoencoder(model, num_epochs, optimizer, scheduler, t_loader, v_loader, f, device=DEVICE):
+
+    train_loss_avg, val_loss_avg = [], []
+    f.write('Training Started...\n')
+    for epoch in range(num_epochs):
+        # Training
+        model.train()
+        train_loss_avg.append(0)
+        num_batches = 0
+        num_wrong, n = [], 0
+        # for image_batch, _, _, _ in t_loader:
+        for image_batch in t_loader:
+            image_batch = image_batch.to(device)
+            if len(image_batch.shape) > 4:
+                image_batch = image_batch.squeeze(1)
+            # autoencoder reconstruction
+            image_batch_recon = model(image_batch)
+            # reconstruction error
+            # loss = F.binary_cross_entropy(image_batch_recon, image_batch)
+            loss = F.mse_loss(image_batch_recon, image_batch)
+            # ic(loss)
+
+            # backpropagation
+            optimizer.zero_grad()
+            loss.backward()
+            # one step of the optmizer (using the gradients from backpropagation)
+            optimizer.step()
+            train_loss_avg[-1] += loss.item()
+            num_wrong.append(torch.sum((image_batch != image_batch_recon)))
+            n += len(image_batch)
+            # ic(f"loss: {loss.item()}")
+            num_batches += 1
+        percent_wrong = torch.sum(torch.tensor(num_wrong)) / (250 * 730 * n)
+        f.write(f'Epoch [%d / %d] average wrong pixels: %f\n' %
+              (epoch+1, num_epochs, percent_wrong))
+        print(f'Epoch [%d / %d] average wrong pixels: %f' %
+              (epoch+1, num_epochs, percent_wrong))
+        train_loss_avg[-1] /= num_batches
+        f.write(f'Epoch [%d / %d] average reconstruction error: %f\n' %
+              (epoch+1, num_epochs, train_loss_avg[-1]))
+        print(f'Epoch [%d / %d] average reconstruction error: %f' %
+              (epoch+1, num_epochs, train_loss_avg[-1]))
+        scheduler.step()
+
+        # Validation Step
+        with torch.no_grad():
+            val_loss_avg.append(0)
+            num_wrong_val, n_val, n_batches_val = [], 0, 0
+            # for image_batch, _, _, _ in v_loader:
+            for image_batch in v_loader:
+                image_batch = image_batch.to(device)
+                if len(image_batch.shape) > 4:
+                    image_batch = image_batch.squeeze(1)
+                # autoencoder reconstruction
+                image_batch_recon = model(image_batch)
+                # reconstruction error
+                # loss = F.binary_cross_entropy(image_batch_recon, image_batch)
+                loss = F.mse_loss(image_batch_recon, image_batch)
+
+                val_loss_avg[-1] += loss.item()
+                num_wrong_val.append(torch.sum((image_batch != image_batch_recon)))
+                n_val += len(image_batch)
+                n_batches_val += 1
+
+            percent_wrong_val = torch.sum(torch.tensor(num_wrong_val)) / (250 * 730 * n_val)
+            f.write(f'Epoch [%d / %d] average wrong pixels [validation]: %f\n' %
+              (epoch+1, num_epochs, percent_wrong_val))
+            print(f'Epoch [%d / %d] average wrong pixels [validation]: %f' %
+              (epoch+1, num_epochs, percent_wrong_val))
+            val_loss_avg[-1] /= n_batches_val
+            f.write(f'Epoch [%d / %d] average reconstruction error [validation]: %f\n' %
+                (epoch+1, num_epochs, val_loss_avg[-1]))
+            print(f'Epoch [%d / %d] average reconstruction error [validation]: %f' %
+                (epoch+1, num_epochs, val_loss_avg[-1]))
+    return model, train_loss_avg, val_loss_avg
+
+
+
+if __name__ == '__main__':
+    print("CT Image Autoencoder Backbone")
+    model = AutoEncoder(6)

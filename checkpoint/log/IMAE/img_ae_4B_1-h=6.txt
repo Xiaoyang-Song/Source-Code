@@ -1,0 +1,2037 @@
+Image Autoencoder training logs
+================================================================================
+Command: run/img_ae.py --dset=4B --lr=0.001 --lr_step=2000 --n_epochs=500 --bsz_tri=256 --bsz_val=256 --h=6 --tag=1-h=6
+================================================================================
+Namespace(dset=['4B'], n_non_defects=100, GL=False, h=6, lr=0.001, lr_step=2000, n_epochs=500, bsz_tri=256, bsz_val=256, tv_ratio=0.1, ckpt_name=None, tag='1-h=6')
+================================================================================
+================================================================================
+-- Current Device: NVIDIA RTX A4000
+-- Device Total Memory: 15.99 GB
+-- Let's use 1 GPUs!
+================================================================================
+
+================================================================================
+Experiment Configuration
+>> Dataset: ['4B']
+>> Learning rate: 0.001
+>> Learning rate scheduler step: 2000
+>> Max epochs: 500
+>> Batch size (tri): 256
+>> Batch size (val): 256
+>> Train-Val Ratio: 0.1
+>> Pretrained checkpoint: None
+>> File identifier: 1-h=6
+================================================================================
+
+================================================================================
+Datast Loading
+Reading part 4B...
+Number of samples: 4751
+Finished gathering data from parts ['4B'].
+4751 CT scan images in total.
+Among 4751 CT scan images, 1608 (33.8455%) images contain defects.
+There are 1708 CT scan images in the dataset in total.
+================================================================================
+No checkpoints loaded.
+Training Started...
+Epoch [1 / 500] average wrong pixels: 1.000000
+Epoch [1 / 500] average reconstruction error: 0.239735
+Epoch [1 / 500] average wrong pixels [validation]: 1.000000
+Epoch [1 / 500] average reconstruction error [validation]: 0.114195
+Epoch [2 / 500] average wrong pixels: 1.000000
+Epoch [2 / 500] average reconstruction error: 0.042885
+Epoch [2 / 500] average wrong pixels [validation]: 0.999998
+Epoch [2 / 500] average reconstruction error [validation]: 0.005856
+Epoch [3 / 500] average wrong pixels: 0.999998
+Epoch [3 / 500] average reconstruction error: 0.004870
+Epoch [3 / 500] average wrong pixels [validation]: 0.999994
+Epoch [3 / 500] average reconstruction error [validation]: 0.004339
+Epoch [4 / 500] average wrong pixels: 0.999992
+Epoch [4 / 500] average reconstruction error: 0.004139
+Epoch [4 / 500] average wrong pixels [validation]: 0.999974
+Epoch [4 / 500] average reconstruction error [validation]: 0.004023
+Epoch [5 / 500] average wrong pixels: 0.999956
+Epoch [5 / 500] average reconstruction error: 0.003926
+Epoch [5 / 500] average wrong pixels [validation]: 0.999864
+Epoch [5 / 500] average reconstruction error [validation]: 0.003837
+Epoch [6 / 500] average wrong pixels: 0.999788
+Epoch [6 / 500] average reconstruction error: 0.003729
+Epoch [6 / 500] average wrong pixels [validation]: 0.999581
+Epoch [6 / 500] average reconstruction error [validation]: 0.003771
+Epoch [7 / 500] average wrong pixels: 0.999445
+Epoch [7 / 500] average reconstruction error: 0.003680
+Epoch [7 / 500] average wrong pixels [validation]: 0.999110
+Epoch [7 / 500] average reconstruction error [validation]: 0.003740
+Epoch [8 / 500] average wrong pixels: 0.998921
+Epoch [8 / 500] average reconstruction error: 0.003665
+Epoch [8 / 500] average wrong pixels [validation]: 0.998533
+Epoch [8 / 500] average reconstruction error [validation]: 0.003722
+Epoch [9 / 500] average wrong pixels: 0.998353
+Epoch [9 / 500] average reconstruction error: 0.003677
+Epoch [9 / 500] average wrong pixels [validation]: 0.997980
+Epoch [9 / 500] average reconstruction error [validation]: 0.003704
+Epoch [10 / 500] average wrong pixels: 0.997789
+Epoch [10 / 500] average reconstruction error: 0.003764
+Epoch [10 / 500] average wrong pixels [validation]: 0.997306
+Epoch [10 / 500] average reconstruction error [validation]: 0.003691
+Epoch [11 / 500] average wrong pixels: 0.997030
+Epoch [11 / 500] average reconstruction error: 0.003655
+Epoch [11 / 500] average wrong pixels [validation]: 0.996560
+Epoch [11 / 500] average reconstruction error [validation]: 0.003683
+Epoch [12 / 500] average wrong pixels: 0.996379
+Epoch [12 / 500] average reconstruction error: 0.003626
+Epoch [12 / 500] average wrong pixels [validation]: 0.995948
+Epoch [12 / 500] average reconstruction error [validation]: 0.003675
+Epoch [13 / 500] average wrong pixels: 0.995784
+Epoch [13 / 500] average reconstruction error: 0.003611
+Epoch [13 / 500] average wrong pixels [validation]: 0.995353
+Epoch [13 / 500] average reconstruction error [validation]: 0.003669
+Epoch [14 / 500] average wrong pixels: 0.995190
+Epoch [14 / 500] average reconstruction error: 0.003590
+Epoch [14 / 500] average wrong pixels [validation]: 0.994764
+Epoch [14 / 500] average reconstruction error [validation]: 0.003663
+Epoch [15 / 500] average wrong pixels: 0.994573
+Epoch [15 / 500] average reconstruction error: 0.003574
+Epoch [15 / 500] average wrong pixels [validation]: 0.994143
+Epoch [15 / 500] average reconstruction error [validation]: 0.003656
+Epoch [16 / 500] average wrong pixels: 0.993970
+Epoch [16 / 500] average reconstruction error: 0.003644
+Epoch [16 / 500] average wrong pixels [validation]: 0.993609
+Epoch [16 / 500] average reconstruction error [validation]: 0.003649
+Epoch [17 / 500] average wrong pixels: 0.993462
+Epoch [17 / 500] average reconstruction error: 0.003597
+Epoch [17 / 500] average wrong pixels [validation]: 0.993048
+Epoch [17 / 500] average reconstruction error [validation]: 0.003644
+Epoch [18 / 500] average wrong pixels: 0.992909
+Epoch [18 / 500] average reconstruction error: 0.003564
+Epoch [18 / 500] average wrong pixels [validation]: 0.992532
+Epoch [18 / 500] average reconstruction error [validation]: 0.003638
+Epoch [19 / 500] average wrong pixels: 0.992423
+Epoch [19 / 500] average reconstruction error: 0.003688
+Epoch [19 / 500] average wrong pixels [validation]: 0.992147
+Epoch [19 / 500] average reconstruction error [validation]: 0.003632
+Epoch [20 / 500] average wrong pixels: 0.992073
+Epoch [20 / 500] average reconstruction error: 0.003576
+Epoch [20 / 500] average wrong pixels [validation]: 0.991628
+Epoch [20 / 500] average reconstruction error [validation]: 0.003626
+Epoch [21 / 500] average wrong pixels: 0.991425
+Epoch [21 / 500] average reconstruction error: 0.003558
+Epoch [21 / 500] average wrong pixels [validation]: 0.990829
+Epoch [21 / 500] average reconstruction error [validation]: 0.003620
+Epoch [22 / 500] average wrong pixels: 0.990596
+Epoch [22 / 500] average reconstruction error: 0.003517
+Epoch [22 / 500] average wrong pixels [validation]: 0.989957
+Epoch [22 / 500] average reconstruction error [validation]: 0.003613
+Epoch [23 / 500] average wrong pixels: 0.989720
+Epoch [23 / 500] average reconstruction error: 0.003534
+Epoch [23 / 500] average wrong pixels [validation]: 0.989207
+Epoch [23 / 500] average reconstruction error [validation]: 0.003604
+Epoch [24 / 500] average wrong pixels: 0.988992
+Epoch [24 / 500] average reconstruction error: 0.003707
+Epoch [24 / 500] average wrong pixels [validation]: 0.988424
+Epoch [24 / 500] average reconstruction error [validation]: 0.003597
+Epoch [25 / 500] average wrong pixels: 0.988215
+Epoch [25 / 500] average reconstruction error: 0.003516
+Epoch [25 / 500] average wrong pixels [validation]: 0.987563
+Epoch [25 / 500] average reconstruction error [validation]: 0.003591
+Epoch [26 / 500] average wrong pixels: 0.987339
+Epoch [26 / 500] average reconstruction error: 0.003600
+Epoch [26 / 500] average wrong pixels [validation]: 0.986790
+Epoch [26 / 500] average reconstruction error [validation]: 0.003586
+Epoch [27 / 500] average wrong pixels: 0.986570
+Epoch [27 / 500] average reconstruction error: 0.003752
+Epoch [27 / 500] average wrong pixels [validation]: 0.986054
+Epoch [27 / 500] average reconstruction error [validation]: 0.003584
+Epoch [28 / 500] average wrong pixels: 0.985893
+Epoch [28 / 500] average reconstruction error: 0.003481
+Epoch [28 / 500] average wrong pixels [validation]: 0.985283
+Epoch [28 / 500] average reconstruction error [validation]: 0.003576
+Epoch [29 / 500] average wrong pixels: 0.985051
+Epoch [29 / 500] average reconstruction error: 0.003493
+Epoch [29 / 500] average wrong pixels [validation]: 0.984476
+Epoch [29 / 500] average reconstruction error [validation]: 0.003569
+Epoch [30 / 500] average wrong pixels: 0.984301
+Epoch [30 / 500] average reconstruction error: 0.003865
+Epoch [30 / 500] average wrong pixels [validation]: 0.984137
+Epoch [30 / 500] average reconstruction error [validation]: 0.003563
+Epoch [31 / 500] average wrong pixels: 0.984146
+Epoch [31 / 500] average reconstruction error: 0.003509
+Epoch [31 / 500] average wrong pixels [validation]: 0.983645
+Epoch [31 / 500] average reconstruction error [validation]: 0.003557
+Epoch [32 / 500] average wrong pixels: 0.983473
+Epoch [32 / 500] average reconstruction error: 0.003563
+Epoch [32 / 500] average wrong pixels [validation]: 0.982717
+Epoch [32 / 500] average reconstruction error [validation]: 0.003551
+Epoch [33 / 500] average wrong pixels: 0.982346
+Epoch [33 / 500] average reconstruction error: 0.003451
+Epoch [33 / 500] average wrong pixels [validation]: 0.981660
+Epoch [33 / 500] average reconstruction error [validation]: 0.003545
+Epoch [34 / 500] average wrong pixels: 0.981503
+Epoch [34 / 500] average reconstruction error: 0.003552
+Epoch [34 / 500] average wrong pixels [validation]: 0.980881
+Epoch [34 / 500] average reconstruction error [validation]: 0.003538
+Epoch [35 / 500] average wrong pixels: 0.980681
+Epoch [35 / 500] average reconstruction error: 0.003582
+Epoch [35 / 500] average wrong pixels [validation]: 0.980568
+Epoch [35 / 500] average reconstruction error [validation]: 0.003532
+Epoch [36 / 500] average wrong pixels: 0.980712
+Epoch [36 / 500] average reconstruction error: 0.003504
+Epoch [36 / 500] average wrong pixels [validation]: 0.980304
+Epoch [36 / 500] average reconstruction error [validation]: 0.003525
+Epoch [37 / 500] average wrong pixels: 0.980173
+Epoch [37 / 500] average reconstruction error: 0.003464
+Epoch [37 / 500] average wrong pixels [validation]: 0.979643
+Epoch [37 / 500] average reconstruction error [validation]: 0.003517
+Epoch [38 / 500] average wrong pixels: 0.979468
+Epoch [38 / 500] average reconstruction error: 0.003545
+Epoch [38 / 500] average wrong pixels [validation]: 0.978856
+Epoch [38 / 500] average reconstruction error [validation]: 0.003509
+Epoch [39 / 500] average wrong pixels: 0.978648
+Epoch [39 / 500] average reconstruction error: 0.003441
+Epoch [39 / 500] average wrong pixels [validation]: 0.978132
+Epoch [39 / 500] average reconstruction error [validation]: 0.003501
+Epoch [40 / 500] average wrong pixels: 0.978013
+Epoch [40 / 500] average reconstruction error: 0.003439
+Epoch [40 / 500] average wrong pixels [validation]: 0.977386
+Epoch [40 / 500] average reconstruction error [validation]: 0.003492
+Epoch [41 / 500] average wrong pixels: 0.977190
+Epoch [41 / 500] average reconstruction error: 0.003523
+Epoch [41 / 500] average wrong pixels [validation]: 0.976523
+Epoch [41 / 500] average reconstruction error [validation]: 0.003483
+Epoch [42 / 500] average wrong pixels: 0.976246
+Epoch [42 / 500] average reconstruction error: 0.003408
+Epoch [42 / 500] average wrong pixels [validation]: 0.975450
+Epoch [42 / 500] average reconstruction error [validation]: 0.003474
+Epoch [43 / 500] average wrong pixels: 0.975203
+Epoch [43 / 500] average reconstruction error: 0.003389
+Epoch [43 / 500] average wrong pixels [validation]: 0.974485
+Epoch [43 / 500] average reconstruction error [validation]: 0.003463
+Epoch [44 / 500] average wrong pixels: 0.974263
+Epoch [44 / 500] average reconstruction error: 0.003402
+Epoch [44 / 500] average wrong pixels [validation]: 0.973548
+Epoch [44 / 500] average reconstruction error [validation]: 0.003451
+Epoch [45 / 500] average wrong pixels: 0.973317
+Epoch [45 / 500] average reconstruction error: 0.003372
+Epoch [45 / 500] average wrong pixels [validation]: 0.972505
+Epoch [45 / 500] average reconstruction error [validation]: 0.003439
+Epoch [46 / 500] average wrong pixels: 0.972211
+Epoch [46 / 500] average reconstruction error: 0.003409
+Epoch [46 / 500] average wrong pixels [validation]: 0.971110
+Epoch [46 / 500] average reconstruction error [validation]: 0.003426
+Epoch [47 / 500] average wrong pixels: 0.970567
+Epoch [47 / 500] average reconstruction error: 0.003412
+Epoch [47 / 500] average wrong pixels [validation]: 0.969426
+Epoch [47 / 500] average reconstruction error [validation]: 0.003412
+Epoch [48 / 500] average wrong pixels: 0.968988
+Epoch [48 / 500] average reconstruction error: 0.003363
+Epoch [48 / 500] average wrong pixels [validation]: 0.968046
+Epoch [48 / 500] average reconstruction error [validation]: 0.003398
+Epoch [49 / 500] average wrong pixels: 0.967701
+Epoch [49 / 500] average reconstruction error: 0.003488
+Epoch [49 / 500] average wrong pixels [validation]: 0.966925
+Epoch [49 / 500] average reconstruction error [validation]: 0.003382
+Epoch [50 / 500] average wrong pixels: 0.966713
+Epoch [50 / 500] average reconstruction error: 0.003315
+Epoch [50 / 500] average wrong pixels [validation]: 0.965725
+Epoch [50 / 500] average reconstruction error [validation]: 0.003365
+Epoch [51 / 500] average wrong pixels: 0.965148
+Epoch [51 / 500] average reconstruction error: 0.003441
+Epoch [51 / 500] average wrong pixels [validation]: 0.963455
+Epoch [51 / 500] average reconstruction error [validation]: 0.003341
+Epoch [52 / 500] average wrong pixels: 0.962908
+Epoch [52 / 500] average reconstruction error: 0.003275
+Epoch [52 / 500] average wrong pixels [validation]: 0.961511
+Epoch [52 / 500] average reconstruction error [validation]: 0.003321
+Epoch [53 / 500] average wrong pixels: 0.960918
+Epoch [53 / 500] average reconstruction error: 0.003275
+Epoch [53 / 500] average wrong pixels [validation]: 0.959484
+Epoch [53 / 500] average reconstruction error [validation]: 0.003299
+Epoch [54 / 500] average wrong pixels: 0.958850
+Epoch [54 / 500] average reconstruction error: 0.003244
+Epoch [54 / 500] average wrong pixels [validation]: 0.957477
+Epoch [54 / 500] average reconstruction error [validation]: 0.003277
+Epoch [55 / 500] average wrong pixels: 0.956924
+Epoch [55 / 500] average reconstruction error: 0.003248
+Epoch [55 / 500] average wrong pixels [validation]: 0.955419
+Epoch [55 / 500] average reconstruction error [validation]: 0.003252
+Epoch [56 / 500] average wrong pixels: 0.954742
+Epoch [56 / 500] average reconstruction error: 0.003227
+Epoch [56 / 500] average wrong pixels [validation]: 0.953231
+Epoch [56 / 500] average reconstruction error [validation]: 0.003226
+Epoch [57 / 500] average wrong pixels: 0.952635
+Epoch [57 / 500] average reconstruction error: 0.003154
+Epoch [57 / 500] average wrong pixels [validation]: 0.950937
+Epoch [57 / 500] average reconstruction error [validation]: 0.003199
+Epoch [58 / 500] average wrong pixels: 0.950205
+Epoch [58 / 500] average reconstruction error: 0.003117
+Epoch [58 / 500] average wrong pixels [validation]: 0.948261
+Epoch [58 / 500] average reconstruction error [validation]: 0.003169
+Epoch [59 / 500] average wrong pixels: 0.947349
+Epoch [59 / 500] average reconstruction error: 0.003107
+Epoch [59 / 500] average wrong pixels [validation]: 0.944648
+Epoch [59 / 500] average reconstruction error [validation]: 0.003137
+Epoch [60 / 500] average wrong pixels: 0.943163
+Epoch [60 / 500] average reconstruction error: 0.003110
+Epoch [60 / 500] average wrong pixels [validation]: 0.940121
+Epoch [60 / 500] average reconstruction error [validation]: 0.003103
+Epoch [61 / 500] average wrong pixels: 0.938740
+Epoch [61 / 500] average reconstruction error: 0.003029
+Epoch [61 / 500] average wrong pixels [validation]: 0.935881
+Epoch [61 / 500] average reconstruction error [validation]: 0.003067
+Epoch [62 / 500] average wrong pixels: 0.934502
+Epoch [62 / 500] average reconstruction error: 0.003025
+Epoch [62 / 500] average wrong pixels [validation]: 0.931733
+Epoch [62 / 500] average reconstruction error [validation]: 0.003029
+Epoch [63 / 500] average wrong pixels: 0.930421
+Epoch [63 / 500] average reconstruction error: 0.002960
+Epoch [63 / 500] average wrong pixels [validation]: 0.927657
+Epoch [63 / 500] average reconstruction error [validation]: 0.002989
+Epoch [64 / 500] average wrong pixels: 0.926462
+Epoch [64 / 500] average reconstruction error: 0.002910
+Epoch [64 / 500] average wrong pixels [validation]: 0.923407
+Epoch [64 / 500] average reconstruction error [validation]: 0.002948
+Epoch [65 / 500] average wrong pixels: 0.921917
+Epoch [65 / 500] average reconstruction error: 0.002882
+Epoch [65 / 500] average wrong pixels [validation]: 0.918823
+Epoch [65 / 500] average reconstruction error [validation]: 0.002904
+Epoch [66 / 500] average wrong pixels: 0.917437
+Epoch [66 / 500] average reconstruction error: 0.002898
+Epoch [66 / 500] average wrong pixels [validation]: 0.914831
+Epoch [66 / 500] average reconstruction error [validation]: 0.002858
+Epoch [67 / 500] average wrong pixels: 0.913605
+Epoch [67 / 500] average reconstruction error: 0.002790
+Epoch [67 / 500] average wrong pixels [validation]: 0.910334
+Epoch [67 / 500] average reconstruction error [validation]: 0.002810
+Epoch [68 / 500] average wrong pixels: 0.908712
+Epoch [68 / 500] average reconstruction error: 0.002727
+Epoch [68 / 500] average wrong pixels [validation]: 0.905202
+Epoch [68 / 500] average reconstruction error [validation]: 0.002761
+Epoch [69 / 500] average wrong pixels: 0.903562
+Epoch [69 / 500] average reconstruction error: 0.002695
+Epoch [69 / 500] average wrong pixels [validation]: 0.900100
+Epoch [69 / 500] average reconstruction error [validation]: 0.002710
+Epoch [70 / 500] average wrong pixels: 0.898485
+Epoch [70 / 500] average reconstruction error: 0.002595
+Epoch [70 / 500] average wrong pixels [validation]: 0.894644
+Epoch [70 / 500] average reconstruction error [validation]: 0.002658
+Epoch [71 / 500] average wrong pixels: 0.892856
+Epoch [71 / 500] average reconstruction error: 0.002559
+Epoch [71 / 500] average wrong pixels [validation]: 0.888778
+Epoch [71 / 500] average reconstruction error [validation]: 0.002604
+Epoch [72 / 500] average wrong pixels: 0.886902
+Epoch [72 / 500] average reconstruction error: 0.002556
+Epoch [72 / 500] average wrong pixels [validation]: 0.882675
+Epoch [72 / 500] average reconstruction error [validation]: 0.002549
+Epoch [73 / 500] average wrong pixels: 0.880622
+Epoch [73 / 500] average reconstruction error: 0.002492
+Epoch [73 / 500] average wrong pixels [validation]: 0.876156
+Epoch [73 / 500] average reconstruction error [validation]: 0.002494
+Epoch [74 / 500] average wrong pixels: 0.874032
+Epoch [74 / 500] average reconstruction error: 0.002530
+Epoch [74 / 500] average wrong pixels [validation]: 0.867283
+Epoch [74 / 500] average reconstruction error [validation]: 0.002437
+Epoch [75 / 500] average wrong pixels: 0.863375
+Epoch [75 / 500] average reconstruction error: 0.002413
+Epoch [75 / 500] average wrong pixels [validation]: 0.853782
+Epoch [75 / 500] average reconstruction error [validation]: 0.002379
+Epoch [76 / 500] average wrong pixels: 0.848575
+Epoch [76 / 500] average reconstruction error: 0.002291
+Epoch [76 / 500] average wrong pixels [validation]: 0.841804
+Epoch [76 / 500] average reconstruction error [validation]: 0.002322
+Epoch [77 / 500] average wrong pixels: 0.839179
+Epoch [77 / 500] average reconstruction error: 0.002389
+Epoch [77 / 500] average wrong pixels [validation]: 0.833651
+Epoch [77 / 500] average reconstruction error [validation]: 0.002264
+Epoch [78 / 500] average wrong pixels: 0.831089
+Epoch [78 / 500] average reconstruction error: 0.002246
+Epoch [78 / 500] average wrong pixels [validation]: 0.825065
+Epoch [78 / 500] average reconstruction error [validation]: 0.002207
+Epoch [79 / 500] average wrong pixels: 0.821989
+Epoch [79 / 500] average reconstruction error: 0.002233
+Epoch [79 / 500] average wrong pixels [validation]: 0.818266
+Epoch [79 / 500] average reconstruction error [validation]: 0.002150
+Epoch [80 / 500] average wrong pixels: 0.816890
+Epoch [80 / 500] average reconstruction error: 0.002050
+Epoch [80 / 500] average wrong pixels [validation]: 0.811628
+Epoch [80 / 500] average reconstruction error [validation]: 0.002093
+Epoch [81 / 500] average wrong pixels: 0.808883
+Epoch [81 / 500] average reconstruction error: 0.002004
+Epoch [81 / 500] average wrong pixels [validation]: 0.801902
+Epoch [81 / 500] average reconstruction error [validation]: 0.002037
+Epoch [82 / 500] average wrong pixels: 0.798345
+Epoch [82 / 500] average reconstruction error: 0.001941
+Epoch [82 / 500] average wrong pixels [validation]: 0.792300
+Epoch [82 / 500] average reconstruction error [validation]: 0.001981
+Epoch [83 / 500] average wrong pixels: 0.789484
+Epoch [83 / 500] average reconstruction error: 0.002007
+Epoch [83 / 500] average wrong pixels [validation]: 0.783909
+Epoch [83 / 500] average reconstruction error [validation]: 0.001927
+Epoch [84 / 500] average wrong pixels: 0.781311
+Epoch [84 / 500] average reconstruction error: 0.001852
+Epoch [84 / 500] average wrong pixels [validation]: 0.775421
+Epoch [84 / 500] average reconstruction error [validation]: 0.001874
+Epoch [85 / 500] average wrong pixels: 0.772618
+Epoch [85 / 500] average reconstruction error: 0.001809
+Epoch [85 / 500] average wrong pixels [validation]: 0.766737
+Epoch [85 / 500] average reconstruction error [validation]: 0.001822
+Epoch [86 / 500] average wrong pixels: 0.764102
+Epoch [86 / 500] average reconstruction error: 0.001722
+Epoch [86 / 500] average wrong pixels [validation]: 0.758341
+Epoch [86 / 500] average reconstruction error [validation]: 0.001771
+Epoch [87 / 500] average wrong pixels: 0.755598
+Epoch [87 / 500] average reconstruction error: 0.001658
+Epoch [87 / 500] average wrong pixels [validation]: 0.749961
+Epoch [87 / 500] average reconstruction error [validation]: 0.001722
+Epoch [88 / 500] average wrong pixels: 0.747348
+Epoch [88 / 500] average reconstruction error: 0.001667
+Epoch [88 / 500] average wrong pixels [validation]: 0.741106
+Epoch [88 / 500] average reconstruction error [validation]: 0.001674
+Epoch [89 / 500] average wrong pixels: 0.738085
+Epoch [89 / 500] average reconstruction error: 0.001658
+Epoch [89 / 500] average wrong pixels [validation]: 0.730522
+Epoch [89 / 500] average reconstruction error [validation]: 0.001627
+Epoch [90 / 500] average wrong pixels: 0.726886
+Epoch [90 / 500] average reconstruction error: 0.001542
+Epoch [90 / 500] average wrong pixels [validation]: 0.721101
+Epoch [90 / 500] average reconstruction error [validation]: 0.001583
+Epoch [91 / 500] average wrong pixels: 0.718523
+Epoch [91 / 500] average reconstruction error: 0.001473
+Epoch [91 / 500] average wrong pixels [validation]: 0.713099
+Epoch [91 / 500] average reconstruction error [validation]: 0.001540
+Epoch [92 / 500] average wrong pixels: 0.710645
+Epoch [92 / 500] average reconstruction error: 0.001467
+Epoch [92 / 500] average wrong pixels [validation]: 0.705490
+Epoch [92 / 500] average reconstruction error [validation]: 0.001498
+Epoch [93 / 500] average wrong pixels: 0.703239
+Epoch [93 / 500] average reconstruction error: 0.001571
+Epoch [93 / 500] average wrong pixels [validation]: 0.698452
+Epoch [93 / 500] average reconstruction error [validation]: 0.001458
+Epoch [94 / 500] average wrong pixels: 0.696340
+Epoch [94 / 500] average reconstruction error: 0.001428
+Epoch [94 / 500] average wrong pixels [validation]: 0.691735
+Epoch [94 / 500] average reconstruction error [validation]: 0.001420
+Epoch [95 / 500] average wrong pixels: 0.689557
+Epoch [95 / 500] average reconstruction error: 0.001347
+Epoch [95 / 500] average wrong pixels [validation]: 0.684933
+Epoch [95 / 500] average reconstruction error [validation]: 0.001383
+Epoch [96 / 500] average wrong pixels: 0.683002
+Epoch [96 / 500] average reconstruction error: 0.001430
+Epoch [96 / 500] average wrong pixels [validation]: 0.680265
+Epoch [96 / 500] average reconstruction error [validation]: 0.001348
+Epoch [97 / 500] average wrong pixels: 0.679448
+Epoch [97 / 500] average reconstruction error: 0.001255
+Epoch [97 / 500] average wrong pixels [validation]: 0.675229
+Epoch [97 / 500] average reconstruction error [validation]: 0.001314
+Epoch [98 / 500] average wrong pixels: 0.672929
+Epoch [98 / 500] average reconstruction error: 0.001261
+Epoch [98 / 500] average wrong pixels [validation]: 0.668290
+Epoch [98 / 500] average reconstruction error [validation]: 0.001282
+Epoch [99 / 500] average wrong pixels: 0.666644
+Epoch [99 / 500] average reconstruction error: 0.001296
+Epoch [99 / 500] average wrong pixels [validation]: 0.662402
+Epoch [99 / 500] average reconstruction error [validation]: 0.001252
+Epoch [100 / 500] average wrong pixels: 0.660694
+Epoch [100 / 500] average reconstruction error: 0.001251
+Epoch [100 / 500] average wrong pixels [validation]: 0.654066
+Epoch [100 / 500] average reconstruction error [validation]: 0.001222
+Epoch [101 / 500] average wrong pixels: 0.650690
+Epoch [101 / 500] average reconstruction error: 0.001259
+Epoch [101 / 500] average wrong pixels [validation]: 0.645917
+Epoch [101 / 500] average reconstruction error [validation]: 0.001194
+Epoch [102 / 500] average wrong pixels: 0.644124
+Epoch [102 / 500] average reconstruction error: 0.001178
+Epoch [102 / 500] average wrong pixels [validation]: 0.639977
+Epoch [102 / 500] average reconstruction error [validation]: 0.001168
+Epoch [103 / 500] average wrong pixels: 0.638276
+Epoch [103 / 500] average reconstruction error: 0.001100
+Epoch [103 / 500] average wrong pixels [validation]: 0.634450
+Epoch [103 / 500] average reconstruction error [validation]: 0.001142
+Epoch [104 / 500] average wrong pixels: 0.633028
+Epoch [104 / 500] average reconstruction error: 0.001061
+Epoch [104 / 500] average wrong pixels [validation]: 0.629527
+Epoch [104 / 500] average reconstruction error [validation]: 0.001118
+Epoch [105 / 500] average wrong pixels: 0.628085
+Epoch [105 / 500] average reconstruction error: 0.001479
+Epoch [105 / 500] average wrong pixels [validation]: 0.624764
+Epoch [105 / 500] average reconstruction error [validation]: 0.001095
+Epoch [106 / 500] average wrong pixels: 0.623578
+Epoch [106 / 500] average reconstruction error: 0.001579
+Epoch [106 / 500] average wrong pixels [validation]: 0.619131
+Epoch [106 / 500] average reconstruction error [validation]: 0.001073
+Epoch [107 / 500] average wrong pixels: 0.617120
+Epoch [107 / 500] average reconstruction error: 0.000972
+Epoch [107 / 500] average wrong pixels [validation]: 0.613499
+Epoch [107 / 500] average reconstruction error [validation]: 0.001052
+Epoch [108 / 500] average wrong pixels: 0.612071
+Epoch [108 / 500] average reconstruction error: 0.000966
+Epoch [108 / 500] average wrong pixels [validation]: 0.608829
+Epoch [108 / 500] average reconstruction error [validation]: 0.001032
+Epoch [109 / 500] average wrong pixels: 0.607579
+Epoch [109 / 500] average reconstruction error: 0.000954
+Epoch [109 / 500] average wrong pixels [validation]: 0.604468
+Epoch [109 / 500] average reconstruction error [validation]: 0.001013
+Epoch [110 / 500] average wrong pixels: 0.603171
+Epoch [110 / 500] average reconstruction error: 0.001038
+Epoch [110 / 500] average wrong pixels [validation]: 0.600270
+Epoch [110 / 500] average reconstruction error [validation]: 0.000994
+Epoch [111 / 500] average wrong pixels: 0.599123
+Epoch [111 / 500] average reconstruction error: 0.001024
+Epoch [111 / 500] average wrong pixels [validation]: 0.595946
+Epoch [111 / 500] average reconstruction error [validation]: 0.000977
+Epoch [112 / 500] average wrong pixels: 0.594099
+Epoch [112 / 500] average reconstruction error: 0.000899
+Epoch [112 / 500] average wrong pixels [validation]: 0.590649
+Epoch [112 / 500] average reconstruction error [validation]: 0.000961
+Epoch [113 / 500] average wrong pixels: 0.589514
+Epoch [113 / 500] average reconstruction error: 0.000888
+Epoch [113 / 500] average wrong pixels [validation]: 0.586178
+Epoch [113 / 500] average reconstruction error [validation]: 0.000945
+Epoch [114 / 500] average wrong pixels: 0.584939
+Epoch [114 / 500] average reconstruction error: 0.001005
+Epoch [114 / 500] average wrong pixels [validation]: 0.577089
+Epoch [114 / 500] average reconstruction error [validation]: 0.000930
+Epoch [115 / 500] average wrong pixels: 0.572603
+Epoch [115 / 500] average reconstruction error: 0.001046
+Epoch [115 / 500] average wrong pixels [validation]: 0.568192
+Epoch [115 / 500] average reconstruction error [validation]: 0.000916
+Epoch [116 / 500] average wrong pixels: 0.567197
+Epoch [116 / 500] average reconstruction error: 0.000865
+Epoch [116 / 500] average wrong pixels [validation]: 0.564376
+Epoch [116 / 500] average reconstruction error [validation]: 0.000902
+Epoch [117 / 500] average wrong pixels: 0.563388
+Epoch [117 / 500] average reconstruction error: 0.000860
+Epoch [117 / 500] average wrong pixels [validation]: 0.555787
+Epoch [117 / 500] average reconstruction error [validation]: 0.000889
+Epoch [118 / 500] average wrong pixels: 0.551438
+Epoch [118 / 500] average reconstruction error: 0.000879
+Epoch [118 / 500] average wrong pixels [validation]: 0.546747
+Epoch [118 / 500] average reconstruction error [validation]: 0.000877
+Epoch [119 / 500] average wrong pixels: 0.545754
+Epoch [119 / 500] average reconstruction error: 0.001007
+Epoch [119 / 500] average wrong pixels [validation]: 0.543211
+Epoch [119 / 500] average reconstruction error [validation]: 0.000865
+Epoch [120 / 500] average wrong pixels: 0.542352
+Epoch [120 / 500] average reconstruction error: 0.000800
+Epoch [120 / 500] average wrong pixels [validation]: 0.539787
+Epoch [120 / 500] average reconstruction error [validation]: 0.000854
+Epoch [121 / 500] average wrong pixels: 0.538834
+Epoch [121 / 500] average reconstruction error: 0.000842
+Epoch [121 / 500] average wrong pixels [validation]: 0.536588
+Epoch [121 / 500] average reconstruction error [validation]: 0.000843
+Epoch [122 / 500] average wrong pixels: 0.535962
+Epoch [122 / 500] average reconstruction error: 0.000748
+Epoch [122 / 500] average wrong pixels [validation]: 0.533766
+Epoch [122 / 500] average reconstruction error [validation]: 0.000833
+Epoch [123 / 500] average wrong pixels: 0.533057
+Epoch [123 / 500] average reconstruction error: 0.000854
+Epoch [123 / 500] average wrong pixels [validation]: 0.530769
+Epoch [123 / 500] average reconstruction error [validation]: 0.000823
+Epoch [124 / 500] average wrong pixels: 0.529825
+Epoch [124 / 500] average reconstruction error: 0.000790
+Epoch [124 / 500] average wrong pixels [validation]: 0.527670
+Epoch [124 / 500] average reconstruction error [validation]: 0.000814
+Epoch [125 / 500] average wrong pixels: 0.526944
+Epoch [125 / 500] average reconstruction error: 0.000835
+Epoch [125 / 500] average wrong pixels [validation]: 0.524543
+Epoch [125 / 500] average reconstruction error [validation]: 0.000805
+Epoch [126 / 500] average wrong pixels: 0.523694
+Epoch [126 / 500] average reconstruction error: 0.000725
+Epoch [126 / 500] average wrong pixels [validation]: 0.521294
+Epoch [126 / 500] average reconstruction error [validation]: 0.000797
+Epoch [127 / 500] average wrong pixels: 0.520404
+Epoch [127 / 500] average reconstruction error: 0.000793
+Epoch [127 / 500] average wrong pixels [validation]: 0.518194
+Epoch [127 / 500] average reconstruction error [validation]: 0.000789
+Epoch [128 / 500] average wrong pixels: 0.517153
+Epoch [128 / 500] average reconstruction error: 0.000718
+Epoch [128 / 500] average wrong pixels [validation]: 0.515098
+Epoch [128 / 500] average reconstruction error [validation]: 0.000781
+Epoch [129 / 500] average wrong pixels: 0.514372
+Epoch [129 / 500] average reconstruction error: 0.000710
+Epoch [129 / 500] average wrong pixels [validation]: 0.512088
+Epoch [129 / 500] average reconstruction error [validation]: 0.000773
+Epoch [130 / 500] average wrong pixels: 0.511486
+Epoch [130 / 500] average reconstruction error: 0.000679
+Epoch [130 / 500] average wrong pixels [validation]: 0.509656
+Epoch [130 / 500] average reconstruction error [validation]: 0.000766
+Epoch [131 / 500] average wrong pixels: 0.509130
+Epoch [131 / 500] average reconstruction error: 0.000938
+Epoch [131 / 500] average wrong pixels [validation]: 0.507117
+Epoch [131 / 500] average reconstruction error [validation]: 0.000759
+Epoch [132 / 500] average wrong pixels: 0.506587
+Epoch [132 / 500] average reconstruction error: 0.000741
+Epoch [132 / 500] average wrong pixels [validation]: 0.504610
+Epoch [132 / 500] average reconstruction error [validation]: 0.000753
+Epoch [133 / 500] average wrong pixels: 0.503989
+Epoch [133 / 500] average reconstruction error: 0.000697
+Epoch [133 / 500] average wrong pixels [validation]: 0.501821
+Epoch [133 / 500] average reconstruction error [validation]: 0.000747
+Epoch [134 / 500] average wrong pixels: 0.500980
+Epoch [134 / 500] average reconstruction error: 0.000707
+Epoch [134 / 500] average wrong pixels [validation]: 0.499527
+Epoch [134 / 500] average reconstruction error [validation]: 0.000741
+Epoch [135 / 500] average wrong pixels: 0.498960
+Epoch [135 / 500] average reconstruction error: 0.000662
+Epoch [135 / 500] average wrong pixels [validation]: 0.497381
+Epoch [135 / 500] average reconstruction error [validation]: 0.000735
+Epoch [136 / 500] average wrong pixels: 0.496905
+Epoch [136 / 500] average reconstruction error: 0.000683
+Epoch [136 / 500] average wrong pixels [validation]: 0.495573
+Epoch [136 / 500] average reconstruction error [validation]: 0.000729
+Epoch [137 / 500] average wrong pixels: 0.495317
+Epoch [137 / 500] average reconstruction error: 0.000680
+Epoch [137 / 500] average wrong pixels [validation]: 0.494032
+Epoch [137 / 500] average reconstruction error [validation]: 0.000724
+Epoch [138 / 500] average wrong pixels: 0.493686
+Epoch [138 / 500] average reconstruction error: 0.000684
+Epoch [138 / 500] average wrong pixels [validation]: 0.492381
+Epoch [138 / 500] average reconstruction error [validation]: 0.000719
+Epoch [139 / 500] average wrong pixels: 0.492025
+Epoch [139 / 500] average reconstruction error: 0.000669
+Epoch [139 / 500] average wrong pixels [validation]: 0.490872
+Epoch [139 / 500] average reconstruction error [validation]: 0.000714
+Epoch [140 / 500] average wrong pixels: 0.490635
+Epoch [140 / 500] average reconstruction error: 0.000684
+Epoch [140 / 500] average wrong pixels [validation]: 0.489280
+Epoch [140 / 500] average reconstruction error [validation]: 0.000709
+Epoch [141 / 500] average wrong pixels: 0.488972
+Epoch [141 / 500] average reconstruction error: 0.000652
+Epoch [141 / 500] average wrong pixels [validation]: 0.487894
+Epoch [141 / 500] average reconstruction error [validation]: 0.000705
+Epoch [142 / 500] average wrong pixels: 0.487531
+Epoch [142 / 500] average reconstruction error: 0.000644
+Epoch [142 / 500] average wrong pixels [validation]: 0.486453
+Epoch [142 / 500] average reconstruction error [validation]: 0.000701
+Epoch [143 / 500] average wrong pixels: 0.486260
+Epoch [143 / 500] average reconstruction error: 0.000627
+Epoch [143 / 500] average wrong pixels [validation]: 0.485010
+Epoch [143 / 500] average reconstruction error [validation]: 0.000696
+Epoch [144 / 500] average wrong pixels: 0.484758
+Epoch [144 / 500] average reconstruction error: 0.000752
+Epoch [144 / 500] average wrong pixels [validation]: 0.484196
+Epoch [144 / 500] average reconstruction error [validation]: 0.000692
+Epoch [145 / 500] average wrong pixels: 0.484270
+Epoch [145 / 500] average reconstruction error: 0.000931
+Epoch [145 / 500] average wrong pixels [validation]: 0.482959
+Epoch [145 / 500] average reconstruction error [validation]: 0.000689
+Epoch [146 / 500] average wrong pixels: 0.482472
+Epoch [146 / 500] average reconstruction error: 0.000648
+Epoch [146 / 500] average wrong pixels [validation]: 0.481141
+Epoch [146 / 500] average reconstruction error [validation]: 0.000685
+Epoch [147 / 500] average wrong pixels: 0.480814
+Epoch [147 / 500] average reconstruction error: 0.000861
+Epoch [147 / 500] average wrong pixels [validation]: 0.479575
+Epoch [147 / 500] average reconstruction error [validation]: 0.000681
+Epoch [148 / 500] average wrong pixels: 0.479214
+Epoch [148 / 500] average reconstruction error: 0.000663
+Epoch [148 / 500] average wrong pixels [validation]: 0.477883
+Epoch [148 / 500] average reconstruction error [validation]: 0.000678
+Epoch [149 / 500] average wrong pixels: 0.477464
+Epoch [149 / 500] average reconstruction error: 0.000654
+Epoch [149 / 500] average wrong pixels [validation]: 0.476143
+Epoch [149 / 500] average reconstruction error [validation]: 0.000674
+Epoch [150 / 500] average wrong pixels: 0.475830
+Epoch [150 / 500] average reconstruction error: 0.000609
+Epoch [150 / 500] average wrong pixels [validation]: 0.473912
+Epoch [150 / 500] average reconstruction error [validation]: 0.000671
+Epoch [151 / 500] average wrong pixels: 0.473263
+Epoch [151 / 500] average reconstruction error: 0.000661
+Epoch [151 / 500] average wrong pixels [validation]: 0.472081
+Epoch [151 / 500] average reconstruction error [validation]: 0.000668
+Epoch [152 / 500] average wrong pixels: 0.471779
+Epoch [152 / 500] average reconstruction error: 0.000620
+Epoch [152 / 500] average wrong pixels [validation]: 0.470973
+Epoch [152 / 500] average reconstruction error [validation]: 0.000665
+Epoch [153 / 500] average wrong pixels: 0.470781
+Epoch [153 / 500] average reconstruction error: 0.000650
+Epoch [153 / 500] average wrong pixels [validation]: 0.469681
+Epoch [153 / 500] average reconstruction error [validation]: 0.000662
+Epoch [154 / 500] average wrong pixels: 0.469357
+Epoch [154 / 500] average reconstruction error: 0.000622
+Epoch [154 / 500] average wrong pixels [validation]: 0.468448
+Epoch [154 / 500] average reconstruction error [validation]: 0.000660
+Epoch [155 / 500] average wrong pixels: 0.468310
+Epoch [155 / 500] average reconstruction error: 0.000614
+Epoch [155 / 500] average wrong pixels [validation]: 0.467440
+Epoch [155 / 500] average reconstruction error [validation]: 0.000657
+Epoch [156 / 500] average wrong pixels: 0.467369
+Epoch [156 / 500] average reconstruction error: 0.000591
+Epoch [156 / 500] average wrong pixels [validation]: 0.466308
+Epoch [156 / 500] average reconstruction error [validation]: 0.000654
+Epoch [157 / 500] average wrong pixels: 0.466108
+Epoch [157 / 500] average reconstruction error: 0.000893
+Epoch [157 / 500] average wrong pixels [validation]: 0.465171
+Epoch [157 / 500] average reconstruction error [validation]: 0.000652
+Epoch [158 / 500] average wrong pixels: 0.465075
+Epoch [158 / 500] average reconstruction error: 0.000593
+Epoch [158 / 500] average wrong pixels [validation]: 0.464169
+Epoch [158 / 500] average reconstruction error [validation]: 0.000649
+Epoch [159 / 500] average wrong pixels: 0.464107
+Epoch [159 / 500] average reconstruction error: 0.000610
+Epoch [159 / 500] average wrong pixels [validation]: 0.463233
+Epoch [159 / 500] average reconstruction error [validation]: 0.000647
+Epoch [160 / 500] average wrong pixels: 0.463133
+Epoch [160 / 500] average reconstruction error: 0.000603
+Epoch [160 / 500] average wrong pixels [validation]: 0.462378
+Epoch [160 / 500] average reconstruction error [validation]: 0.000645
+Epoch [161 / 500] average wrong pixels: 0.462287
+Epoch [161 / 500] average reconstruction error: 0.000607
+Epoch [161 / 500] average wrong pixels [validation]: 0.461483
+Epoch [161 / 500] average reconstruction error [validation]: 0.000643
+Epoch [162 / 500] average wrong pixels: 0.461396
+Epoch [162 / 500] average reconstruction error: 0.000643
+Epoch [162 / 500] average wrong pixels [validation]: 0.460612
+Epoch [162 / 500] average reconstruction error [validation]: 0.000640
+Epoch [163 / 500] average wrong pixels: 0.460524
+Epoch [163 / 500] average reconstruction error: 0.000569
+Epoch [163 / 500] average wrong pixels [validation]: 0.459729
+Epoch [163 / 500] average reconstruction error [validation]: 0.000638
+Epoch [164 / 500] average wrong pixels: 0.459619
+Epoch [164 / 500] average reconstruction error: 0.000821
+Epoch [164 / 500] average wrong pixels [validation]: 0.458755
+Epoch [164 / 500] average reconstruction error [validation]: 0.000636
+Epoch [165 / 500] average wrong pixels: 0.458595
+Epoch [165 / 500] average reconstruction error: 0.000603
+Epoch [165 / 500] average wrong pixels [validation]: 0.457926
+Epoch [165 / 500] average reconstruction error [validation]: 0.000634
+Epoch [166 / 500] average wrong pixels: 0.457907
+Epoch [166 / 500] average reconstruction error: 0.000557
+Epoch [166 / 500] average wrong pixels [validation]: 0.456999
+Epoch [166 / 500] average reconstruction error [validation]: 0.000633
+Epoch [167 / 500] average wrong pixels: 0.456886
+Epoch [167 / 500] average reconstruction error: 0.000558
+Epoch [167 / 500] average wrong pixels [validation]: 0.455760
+Epoch [167 / 500] average reconstruction error [validation]: 0.000631
+Epoch [168 / 500] average wrong pixels: 0.455460
+Epoch [168 / 500] average reconstruction error: 0.000539
+Epoch [168 / 500] average wrong pixels [validation]: 0.454491
+Epoch [168 / 500] average reconstruction error [validation]: 0.000629
+Epoch [169 / 500] average wrong pixels: 0.454319
+Epoch [169 / 500] average reconstruction error: 0.000582
+Epoch [169 / 500] average wrong pixels [validation]: 0.453419
+Epoch [169 / 500] average reconstruction error [validation]: 0.000627
+Epoch [170 / 500] average wrong pixels: 0.453275
+Epoch [170 / 500] average reconstruction error: 0.000652
+Epoch [170 / 500] average wrong pixels [validation]: 0.452159
+Epoch [170 / 500] average reconstruction error [validation]: 0.000626
+Epoch [171 / 500] average wrong pixels: 0.451801
+Epoch [171 / 500] average reconstruction error: 0.000554
+Epoch [171 / 500] average wrong pixels [validation]: 0.450880
+Epoch [171 / 500] average reconstruction error [validation]: 0.000624
+Epoch [172 / 500] average wrong pixels: 0.450777
+Epoch [172 / 500] average reconstruction error: 0.000576
+Epoch [172 / 500] average wrong pixels [validation]: 0.449759
+Epoch [172 / 500] average reconstruction error [validation]: 0.000622
+Epoch [173 / 500] average wrong pixels: 0.449590
+Epoch [173 / 500] average reconstruction error: 0.000584
+Epoch [173 / 500] average wrong pixels [validation]: 0.448688
+Epoch [173 / 500] average reconstruction error [validation]: 0.000621
+Epoch [174 / 500] average wrong pixels: 0.448531
+Epoch [174 / 500] average reconstruction error: 0.000547
+Epoch [174 / 500] average wrong pixels [validation]: 0.439078
+Epoch [174 / 500] average reconstruction error [validation]: 0.000620
+Epoch [175 / 500] average wrong pixels: 0.433566
+Epoch [175 / 500] average reconstruction error: 0.000618
+Epoch [175 / 500] average wrong pixels [validation]: 0.430732
+Epoch [175 / 500] average reconstruction error [validation]: 0.000618
+Epoch [176 / 500] average wrong pixels: 0.430926
+Epoch [176 / 500] average reconstruction error: 0.000541
+Epoch [176 / 500] average wrong pixels [validation]: 0.430890
+Epoch [176 / 500] average reconstruction error [validation]: 0.000617
+Epoch [177 / 500] average wrong pixels: 0.430824
+Epoch [177 / 500] average reconstruction error: 0.000547
+Epoch [177 / 500] average wrong pixels [validation]: 0.430244
+Epoch [177 / 500] average reconstruction error [validation]: 0.000615
+Epoch [178 / 500] average wrong pixels: 0.430211
+Epoch [178 / 500] average reconstruction error: 0.000572
+Epoch [178 / 500] average wrong pixels [validation]: 0.429422
+Epoch [178 / 500] average reconstruction error [validation]: 0.000614
+Epoch [179 / 500] average wrong pixels: 0.429119
+Epoch [179 / 500] average reconstruction error: 0.000558
+Epoch [179 / 500] average wrong pixels [validation]: 0.428450
+Epoch [179 / 500] average reconstruction error [validation]: 0.000613
+Epoch [180 / 500] average wrong pixels: 0.428203
+Epoch [180 / 500] average reconstruction error: 0.000602
+Epoch [180 / 500] average wrong pixels [validation]: 0.427314
+Epoch [180 / 500] average reconstruction error [validation]: 0.000612
+Epoch [181 / 500] average wrong pixels: 0.427252
+Epoch [181 / 500] average reconstruction error: 0.000755
+Epoch [181 / 500] average wrong pixels [validation]: 0.426843
+Epoch [181 / 500] average reconstruction error [validation]: 0.000610
+Epoch [182 / 500] average wrong pixels: 0.426988
+Epoch [182 / 500] average reconstruction error: 0.000548
+Epoch [182 / 500] average wrong pixels [validation]: 0.426538
+Epoch [182 / 500] average reconstruction error [validation]: 0.000609
+Epoch [183 / 500] average wrong pixels: 0.426535
+Epoch [183 / 500] average reconstruction error: 0.000633
+Epoch [183 / 500] average wrong pixels [validation]: 0.425909
+Epoch [183 / 500] average reconstruction error [validation]: 0.000608
+Epoch [184 / 500] average wrong pixels: 0.425897
+Epoch [184 / 500] average reconstruction error: 0.000669
+Epoch [184 / 500] average wrong pixels [validation]: 0.425196
+Epoch [184 / 500] average reconstruction error [validation]: 0.000607
+Epoch [185 / 500] average wrong pixels: 0.425156
+Epoch [185 / 500] average reconstruction error: 0.000562
+Epoch [185 / 500] average wrong pixels [validation]: 0.424473
+Epoch [185 / 500] average reconstruction error [validation]: 0.000606
+Epoch [186 / 500] average wrong pixels: 0.424372
+Epoch [186 / 500] average reconstruction error: 0.000628
+Epoch [186 / 500] average wrong pixels [validation]: 0.424648
+Epoch [186 / 500] average reconstruction error [validation]: 0.000605
+Epoch [187 / 500] average wrong pixels: 0.425141
+Epoch [187 / 500] average reconstruction error: 0.000552
+Epoch [187 / 500] average wrong pixels [validation]: 0.424571
+Epoch [187 / 500] average reconstruction error [validation]: 0.000604
+Epoch [188 / 500] average wrong pixels: 0.424443
+Epoch [188 / 500] average reconstruction error: 0.000707
+Epoch [188 / 500] average wrong pixels [validation]: 0.423696
+Epoch [188 / 500] average reconstruction error [validation]: 0.000603
+Epoch [189 / 500] average wrong pixels: 0.423627
+Epoch [189 / 500] average reconstruction error: 0.000640
+Epoch [189 / 500] average wrong pixels [validation]: 0.423025
+Epoch [189 / 500] average reconstruction error [validation]: 0.000602
+Epoch [190 / 500] average wrong pixels: 0.423056
+Epoch [190 / 500] average reconstruction error: 0.000608
+Epoch [190 / 500] average wrong pixels [validation]: 0.422359
+Epoch [190 / 500] average reconstruction error [validation]: 0.000601
+Epoch [191 / 500] average wrong pixels: 0.422378
+Epoch [191 / 500] average reconstruction error: 0.000556
+Epoch [191 / 500] average wrong pixels [validation]: 0.421710
+Epoch [191 / 500] average reconstruction error [validation]: 0.000600
+Epoch [192 / 500] average wrong pixels: 0.421709
+Epoch [192 / 500] average reconstruction error: 0.000612
+Epoch [192 / 500] average wrong pixels [validation]: 0.421208
+Epoch [192 / 500] average reconstruction error [validation]: 0.000599
+Epoch [193 / 500] average wrong pixels: 0.421263
+Epoch [193 / 500] average reconstruction error: 0.000601
+Epoch [193 / 500] average wrong pixels [validation]: 0.420686
+Epoch [193 / 500] average reconstruction error [validation]: 0.000598
+Epoch [194 / 500] average wrong pixels: 0.420606
+Epoch [194 / 500] average reconstruction error: 0.000614
+Epoch [194 / 500] average wrong pixels [validation]: 0.419963
+Epoch [194 / 500] average reconstruction error [validation]: 0.000597
+Epoch [195 / 500] average wrong pixels: 0.419924
+Epoch [195 / 500] average reconstruction error: 0.000547
+Epoch [195 / 500] average wrong pixels [validation]: 0.419024
+Epoch [195 / 500] average reconstruction error [validation]: 0.000597
+Epoch [196 / 500] average wrong pixels: 0.418777
+Epoch [196 / 500] average reconstruction error: 0.000565
+Epoch [196 / 500] average wrong pixels [validation]: 0.418036
+Epoch [196 / 500] average reconstruction error [validation]: 0.000596
+Epoch [197 / 500] average wrong pixels: 0.417892
+Epoch [197 / 500] average reconstruction error: 0.000518
+Epoch [197 / 500] average wrong pixels [validation]: 0.417274
+Epoch [197 / 500] average reconstruction error [validation]: 0.000595
+Epoch [198 / 500] average wrong pixels: 0.417217
+Epoch [198 / 500] average reconstruction error: 0.000623
+Epoch [198 / 500] average wrong pixels [validation]: 0.416515
+Epoch [198 / 500] average reconstruction error [validation]: 0.000594
+Epoch [199 / 500] average wrong pixels: 0.416463
+Epoch [199 / 500] average reconstruction error: 0.000536
+Epoch [199 / 500] average wrong pixels [validation]: 0.415676
+Epoch [199 / 500] average reconstruction error [validation]: 0.000593
+Epoch [200 / 500] average wrong pixels: 0.415479
+Epoch [200 / 500] average reconstruction error: 0.000598
+Epoch [200 / 500] average wrong pixels [validation]: 0.414666
+Epoch [200 / 500] average reconstruction error [validation]: 0.000593
+Epoch [201 / 500] average wrong pixels: 0.414574
+Epoch [201 / 500] average reconstruction error: 0.000635
+Epoch [201 / 500] average wrong pixels [validation]: 0.413861
+Epoch [201 / 500] average reconstruction error [validation]: 0.000592
+Epoch [202 / 500] average wrong pixels: 0.413749
+Epoch [202 / 500] average reconstruction error: 0.000521
+Epoch [202 / 500] average wrong pixels [validation]: 0.412952
+Epoch [202 / 500] average reconstruction error [validation]: 0.000591
+Epoch [203 / 500] average wrong pixels: 0.412833
+Epoch [203 / 500] average reconstruction error: 0.000567
+Epoch [203 / 500] average wrong pixels [validation]: 0.412232
+Epoch [203 / 500] average reconstruction error [validation]: 0.000591
+Epoch [204 / 500] average wrong pixels: 0.412187
+Epoch [204 / 500] average reconstruction error: 0.000521
+Epoch [204 / 500] average wrong pixels [validation]: 0.411604
+Epoch [204 / 500] average reconstruction error [validation]: 0.000590
+Epoch [205 / 500] average wrong pixels: 0.411598
+Epoch [205 / 500] average reconstruction error: 0.000517
+Epoch [205 / 500] average wrong pixels [validation]: 0.410977
+Epoch [205 / 500] average reconstruction error [validation]: 0.000589
+Epoch [206 / 500] average wrong pixels: 0.410935
+Epoch [206 / 500] average reconstruction error: 0.000518
+Epoch [206 / 500] average wrong pixels [validation]: 0.410350
+Epoch [206 / 500] average reconstruction error [validation]: 0.000589
+Epoch [207 / 500] average wrong pixels: 0.410325
+Epoch [207 / 500] average reconstruction error: 0.000510
+Epoch [207 / 500] average wrong pixels [validation]: 0.409729
+Epoch [207 / 500] average reconstruction error [validation]: 0.000588
+Epoch [208 / 500] average wrong pixels: 0.409735
+Epoch [208 / 500] average reconstruction error: 0.000585
+Epoch [208 / 500] average wrong pixels [validation]: 0.409096
+Epoch [208 / 500] average reconstruction error [validation]: 0.000587
+Epoch [209 / 500] average wrong pixels: 0.409058
+Epoch [209 / 500] average reconstruction error: 0.000511
+Epoch [209 / 500] average wrong pixels [validation]: 0.408420
+Epoch [209 / 500] average reconstruction error [validation]: 0.000587
+Epoch [210 / 500] average wrong pixels: 0.408425
+Epoch [210 / 500] average reconstruction error: 0.000649
+Epoch [210 / 500] average wrong pixels [validation]: 0.407770
+Epoch [210 / 500] average reconstruction error [validation]: 0.000586
+Epoch [211 / 500] average wrong pixels: 0.407762
+Epoch [211 / 500] average reconstruction error: 0.000521
+Epoch [211 / 500] average wrong pixels [validation]: 0.407055
+Epoch [211 / 500] average reconstruction error [validation]: 0.000586
+Epoch [212 / 500] average wrong pixels: 0.407028
+Epoch [212 / 500] average reconstruction error: 0.000533
+Epoch [212 / 500] average wrong pixels [validation]: 0.406304
+Epoch [212 / 500] average reconstruction error [validation]: 0.000585
+Epoch [213 / 500] average wrong pixels: 0.406265
+Epoch [213 / 500] average reconstruction error: 0.000507
+Epoch [213 / 500] average wrong pixels [validation]: 0.405531
+Epoch [213 / 500] average reconstruction error [validation]: 0.000584
+Epoch [214 / 500] average wrong pixels: 0.405482
+Epoch [214 / 500] average reconstruction error: 0.000493
+Epoch [214 / 500] average wrong pixels [validation]: 0.404750
+Epoch [214 / 500] average reconstruction error [validation]: 0.000584
+Epoch [215 / 500] average wrong pixels: 0.404721
+Epoch [215 / 500] average reconstruction error: 0.000566
+Epoch [215 / 500] average wrong pixels [validation]: 0.403992
+Epoch [215 / 500] average reconstruction error [validation]: 0.000583
+Epoch [216 / 500] average wrong pixels: 0.403908
+Epoch [216 / 500] average reconstruction error: 0.000544
+Epoch [216 / 500] average wrong pixels [validation]: 0.403323
+Epoch [216 / 500] average reconstruction error [validation]: 0.000583
+Epoch [217 / 500] average wrong pixels: 0.403369
+Epoch [217 / 500] average reconstruction error: 0.000523
+Epoch [217 / 500] average wrong pixels [validation]: 0.402772
+Epoch [217 / 500] average reconstruction error [validation]: 0.000582
+Epoch [218 / 500] average wrong pixels: 0.402827
+Epoch [218 / 500] average reconstruction error: 0.000614
+Epoch [218 / 500] average wrong pixels [validation]: 0.402243
+Epoch [218 / 500] average reconstruction error [validation]: 0.000582
+Epoch [219 / 500] average wrong pixels: 0.402278
+Epoch [219 / 500] average reconstruction error: 0.000558
+Epoch [219 / 500] average wrong pixels [validation]: 0.401737
+Epoch [219 / 500] average reconstruction error [validation]: 0.000581
+Epoch [220 / 500] average wrong pixels: 0.401777
+Epoch [220 / 500] average reconstruction error: 0.000507
+Epoch [220 / 500] average wrong pixels [validation]: 0.399757
+Epoch [220 / 500] average reconstruction error [validation]: 0.000581
+Epoch [221 / 500] average wrong pixels: 0.398818
+Epoch [221 / 500] average reconstruction error: 0.000505
+Epoch [221 / 500] average wrong pixels [validation]: 0.397915
+Epoch [221 / 500] average reconstruction error [validation]: 0.000580
+Epoch [222 / 500] average wrong pixels: 0.397984
+Epoch [222 / 500] average reconstruction error: 0.000715
+Epoch [222 / 500] average wrong pixels [validation]: 0.397461
+Epoch [222 / 500] average reconstruction error [validation]: 0.000580
+Epoch [223 / 500] average wrong pixels: 0.397550
+Epoch [223 / 500] average reconstruction error: 0.000546
+Epoch [223 / 500] average wrong pixels [validation]: 0.396985
+Epoch [223 / 500] average reconstruction error [validation]: 0.000580
+Epoch [224 / 500] average wrong pixels: 0.396986
+Epoch [224 / 500] average reconstruction error: 0.000562
+Epoch [224 / 500] average wrong pixels [validation]: 0.396494
+Epoch [224 / 500] average reconstruction error [validation]: 0.000579
+Epoch [225 / 500] average wrong pixels: 0.396560
+Epoch [225 / 500] average reconstruction error: 0.000831
+Epoch [225 / 500] average wrong pixels [validation]: 0.395945
+Epoch [225 / 500] average reconstruction error [validation]: 0.000579
+Epoch [226 / 500] average wrong pixels: 0.395876
+Epoch [226 / 500] average reconstruction error: 0.000509
+Epoch [226 / 500] average wrong pixels [validation]: 0.395353
+Epoch [226 / 500] average reconstruction error [validation]: 0.000578
+Epoch [227 / 500] average wrong pixels: 0.395404
+Epoch [227 / 500] average reconstruction error: 0.000634
+Epoch [227 / 500] average wrong pixels [validation]: 0.394900
+Epoch [227 / 500] average reconstruction error [validation]: 0.000578
+Epoch [228 / 500] average wrong pixels: 0.394951
+Epoch [228 / 500] average reconstruction error: 0.000508
+Epoch [228 / 500] average wrong pixels [validation]: 0.394469
+Epoch [228 / 500] average reconstruction error [validation]: 0.000577
+Epoch [229 / 500] average wrong pixels: 0.394511
+Epoch [229 / 500] average reconstruction error: 0.000552
+Epoch [229 / 500] average wrong pixels [validation]: 0.394007
+Epoch [229 / 500] average reconstruction error [validation]: 0.000577
+Epoch [230 / 500] average wrong pixels: 0.394037
+Epoch [230 / 500] average reconstruction error: 0.000517
+Epoch [230 / 500] average wrong pixels [validation]: 0.393519
+Epoch [230 / 500] average reconstruction error [validation]: 0.000577
+Epoch [231 / 500] average wrong pixels: 0.393564
+Epoch [231 / 500] average reconstruction error: 0.000556
+Epoch [231 / 500] average wrong pixels [validation]: 0.393075
+Epoch [231 / 500] average reconstruction error [validation]: 0.000576
+Epoch [232 / 500] average wrong pixels: 0.393131
+Epoch [232 / 500] average reconstruction error: 0.000645
+Epoch [232 / 500] average wrong pixels [validation]: 0.392652
+Epoch [232 / 500] average reconstruction error [validation]: 0.000576
+Epoch [233 / 500] average wrong pixels: 0.392700
+Epoch [233 / 500] average reconstruction error: 0.000709
+Epoch [233 / 500] average wrong pixels [validation]: 0.392237
+Epoch [233 / 500] average reconstruction error [validation]: 0.000575
+Epoch [234 / 500] average wrong pixels: 0.392331
+Epoch [234 / 500] average reconstruction error: 0.000520
+Epoch [234 / 500] average wrong pixels [validation]: 0.391853
+Epoch [234 / 500] average reconstruction error [validation]: 0.000575
+Epoch [235 / 500] average wrong pixels: 0.391895
+Epoch [235 / 500] average reconstruction error: 0.000547
+Epoch [235 / 500] average wrong pixels [validation]: 0.391404
+Epoch [235 / 500] average reconstruction error [validation]: 0.000575
+Epoch [236 / 500] average wrong pixels: 0.391464
+Epoch [236 / 500] average reconstruction error: 0.000515
+Epoch [236 / 500] average wrong pixels [validation]: 0.390993
+Epoch [236 / 500] average reconstruction error [validation]: 0.000574
+Epoch [237 / 500] average wrong pixels: 0.391071
+Epoch [237 / 500] average reconstruction error: 0.000652
+Epoch [237 / 500] average wrong pixels [validation]: 0.390608
+Epoch [237 / 500] average reconstruction error [validation]: 0.000574
+Epoch [238 / 500] average wrong pixels: 0.390795
+Epoch [238 / 500] average reconstruction error: 0.000552
+Epoch [238 / 500] average wrong pixels [validation]: 0.389437
+Epoch [238 / 500] average reconstruction error [validation]: 0.000574
+Epoch [239 / 500] average wrong pixels: 0.388929
+Epoch [239 / 500] average reconstruction error: 0.000527
+Epoch [239 / 500] average wrong pixels [validation]: 0.388778
+Epoch [239 / 500] average reconstruction error [validation]: 0.000573
+Epoch [240 / 500] average wrong pixels: 0.388934
+Epoch [240 / 500] average reconstruction error: 0.000548
+Epoch [240 / 500] average wrong pixels [validation]: 0.388694
+Epoch [240 / 500] average reconstruction error [validation]: 0.000573
+Epoch [241 / 500] average wrong pixels: 0.388801
+Epoch [241 / 500] average reconstruction error: 0.000519
+Epoch [241 / 500] average wrong pixels [validation]: 0.388447
+Epoch [241 / 500] average reconstruction error [validation]: 0.000573
+Epoch [242 / 500] average wrong pixels: 0.388568
+Epoch [242 / 500] average reconstruction error: 0.000548
+Epoch [242 / 500] average wrong pixels [validation]: 0.387453
+Epoch [242 / 500] average reconstruction error [validation]: 0.000572
+Epoch [243 / 500] average wrong pixels: 0.387100
+Epoch [243 / 500] average reconstruction error: 0.000827
+Epoch [243 / 500] average wrong pixels [validation]: 0.386513
+Epoch [243 / 500] average reconstruction error [validation]: 0.000572
+Epoch [244 / 500] average wrong pixels: 0.386598
+Epoch [244 / 500] average reconstruction error: 0.000543
+Epoch [244 / 500] average wrong pixels [validation]: 0.386205
+Epoch [244 / 500] average reconstruction error [validation]: 0.000572
+Epoch [245 / 500] average wrong pixels: 0.386314
+Epoch [245 / 500] average reconstruction error: 0.000499
+Epoch [245 / 500] average wrong pixels [validation]: 0.385909
+Epoch [245 / 500] average reconstruction error [validation]: 0.000572
+Epoch [246 / 500] average wrong pixels: 0.386012
+Epoch [246 / 500] average reconstruction error: 0.000539
+Epoch [246 / 500] average wrong pixels [validation]: 0.385617
+Epoch [246 / 500] average reconstruction error [validation]: 0.000571
+Epoch [247 / 500] average wrong pixels: 0.385707
+Epoch [247 / 500] average reconstruction error: 0.000512
+Epoch [247 / 500] average wrong pixels [validation]: 0.385256
+Epoch [247 / 500] average reconstruction error [validation]: 0.000571
+Epoch [248 / 500] average wrong pixels: 0.385340
+Epoch [248 / 500] average reconstruction error: 0.000480
+Epoch [248 / 500] average wrong pixels [validation]: 0.384901
+Epoch [248 / 500] average reconstruction error [validation]: 0.000571
+Epoch [249 / 500] average wrong pixels: 0.384954
+Epoch [249 / 500] average reconstruction error: 0.000494
+Epoch [249 / 500] average wrong pixels [validation]: 0.384285
+Epoch [249 / 500] average reconstruction error [validation]: 0.000570
+Epoch [250 / 500] average wrong pixels: 0.384183
+Epoch [250 / 500] average reconstruction error: 0.000500
+Epoch [250 / 500] average wrong pixels [validation]: 0.385784
+Epoch [250 / 500] average reconstruction error [validation]: 0.000570
+Epoch [251 / 500] average wrong pixels: 0.387078
+Epoch [251 / 500] average reconstruction error: 0.000527
+Epoch [251 / 500] average wrong pixels [validation]: 0.386835
+Epoch [251 / 500] average reconstruction error [validation]: 0.000570
+Epoch [252 / 500] average wrong pixels: 0.386758
+Epoch [252 / 500] average reconstruction error: 0.000512
+Epoch [252 / 500] average wrong pixels [validation]: 0.385948
+Epoch [252 / 500] average reconstruction error [validation]: 0.000570
+Epoch [253 / 500] average wrong pixels: 0.385874
+Epoch [253 / 500] average reconstruction error: 0.000543
+Epoch [253 / 500] average wrong pixels [validation]: 0.385282
+Epoch [253 / 500] average reconstruction error [validation]: 0.000569
+Epoch [254 / 500] average wrong pixels: 0.385336
+Epoch [254 / 500] average reconstruction error: 0.000561
+Epoch [254 / 500] average wrong pixels [validation]: 0.384799
+Epoch [254 / 500] average reconstruction error [validation]: 0.000569
+Epoch [255 / 500] average wrong pixels: 0.384813
+Epoch [255 / 500] average reconstruction error: 0.000491
+Epoch [255 / 500] average wrong pixels [validation]: 0.384360
+Epoch [255 / 500] average reconstruction error [validation]: 0.000569
+Epoch [256 / 500] average wrong pixels: 0.384438
+Epoch [256 / 500] average reconstruction error: 0.000521
+Epoch [256 / 500] average wrong pixels [validation]: 0.383962
+Epoch [256 / 500] average reconstruction error [validation]: 0.000569
+Epoch [257 / 500] average wrong pixels: 0.384008
+Epoch [257 / 500] average reconstruction error: 0.000510
+Epoch [257 / 500] average wrong pixels [validation]: 0.383558
+Epoch [257 / 500] average reconstruction error [validation]: 0.000568
+Epoch [258 / 500] average wrong pixels: 0.383637
+Epoch [258 / 500] average reconstruction error: 0.000523
+Epoch [258 / 500] average wrong pixels [validation]: 0.383195
+Epoch [258 / 500] average reconstruction error [validation]: 0.000568
+Epoch [259 / 500] average wrong pixels: 0.383220
+Epoch [259 / 500] average reconstruction error: 0.000477
+Epoch [259 / 500] average wrong pixels [validation]: 0.382811
+Epoch [259 / 500] average reconstruction error [validation]: 0.000568
+Epoch [260 / 500] average wrong pixels: 0.382908
+Epoch [260 / 500] average reconstruction error: 0.000500
+Epoch [260 / 500] average wrong pixels [validation]: 0.382445
+Epoch [260 / 500] average reconstruction error [validation]: 0.000568
+Epoch [261 / 500] average wrong pixels: 0.382547
+Epoch [261 / 500] average reconstruction error: 0.000513
+Epoch [261 / 500] average wrong pixels [validation]: 0.382103
+Epoch [261 / 500] average reconstruction error [validation]: 0.000567
+Epoch [262 / 500] average wrong pixels: 0.382194
+Epoch [262 / 500] average reconstruction error: 0.000557
+Epoch [262 / 500] average wrong pixels [validation]: 0.381746
+Epoch [262 / 500] average reconstruction error [validation]: 0.000567
+Epoch [263 / 500] average wrong pixels: 0.381842
+Epoch [263 / 500] average reconstruction error: 0.000476
+Epoch [263 / 500] average wrong pixels [validation]: 0.381418
+Epoch [263 / 500] average reconstruction error [validation]: 0.000567
+Epoch [264 / 500] average wrong pixels: 0.381493
+Epoch [264 / 500] average reconstruction error: 0.000578
+Epoch [264 / 500] average wrong pixels [validation]: 0.381043
+Epoch [264 / 500] average reconstruction error [validation]: 0.000567
+Epoch [265 / 500] average wrong pixels: 0.381157
+Epoch [265 / 500] average reconstruction error: 0.000528
+Epoch [265 / 500] average wrong pixels [validation]: 0.380481
+Epoch [265 / 500] average reconstruction error [validation]: 0.000567
+Epoch [266 / 500] average wrong pixels: 0.380408
+Epoch [266 / 500] average reconstruction error: 0.000571
+Epoch [266 / 500] average wrong pixels [validation]: 0.379873
+Epoch [266 / 500] average reconstruction error [validation]: 0.000566
+Epoch [267 / 500] average wrong pixels: 0.379952
+Epoch [267 / 500] average reconstruction error: 0.000652
+Epoch [267 / 500] average wrong pixels [validation]: 0.379386
+Epoch [267 / 500] average reconstruction error [validation]: 0.000566
+Epoch [268 / 500] average wrong pixels: 0.379473
+Epoch [268 / 500] average reconstruction error: 0.000583
+Epoch [268 / 500] average wrong pixels [validation]: 0.378939
+Epoch [268 / 500] average reconstruction error [validation]: 0.000566
+Epoch [269 / 500] average wrong pixels: 0.378983
+Epoch [269 / 500] average reconstruction error: 0.000627
+Epoch [269 / 500] average wrong pixels [validation]: 0.378459
+Epoch [269 / 500] average reconstruction error [validation]: 0.000566
+Epoch [270 / 500] average wrong pixels: 0.378569
+Epoch [270 / 500] average reconstruction error: 0.000544
+Epoch [270 / 500] average wrong pixels [validation]: 0.378063
+Epoch [270 / 500] average reconstruction error [validation]: 0.000566
+Epoch [271 / 500] average wrong pixels: 0.378096
+Epoch [271 / 500] average reconstruction error: 0.000681
+Epoch [271 / 500] average wrong pixels [validation]: 0.377612
+Epoch [271 / 500] average reconstruction error [validation]: 0.000565
+Epoch [272 / 500] average wrong pixels: 0.377673
+Epoch [272 / 500] average reconstruction error: 0.000497
+Epoch [272 / 500] average wrong pixels [validation]: 0.377166
+Epoch [272 / 500] average reconstruction error [validation]: 0.000565
+Epoch [273 / 500] average wrong pixels: 0.377254
+Epoch [273 / 500] average reconstruction error: 0.000512
+Epoch [273 / 500] average wrong pixels [validation]: 0.376761
+Epoch [273 / 500] average reconstruction error [validation]: 0.000565
+Epoch [274 / 500] average wrong pixels: 0.376825
+Epoch [274 / 500] average reconstruction error: 0.000474
+Epoch [274 / 500] average wrong pixels [validation]: 0.376367
+Epoch [274 / 500] average reconstruction error [validation]: 0.000565
+Epoch [275 / 500] average wrong pixels: 0.376450
+Epoch [275 / 500] average reconstruction error: 0.000504
+Epoch [275 / 500] average wrong pixels [validation]: 0.375961
+Epoch [275 / 500] average reconstruction error [validation]: 0.000565
+Epoch [276 / 500] average wrong pixels: 0.376042
+Epoch [276 / 500] average reconstruction error: 0.000506
+Epoch [276 / 500] average wrong pixels [validation]: 0.375600
+Epoch [276 / 500] average reconstruction error [validation]: 0.000564
+Epoch [277 / 500] average wrong pixels: 0.375702
+Epoch [277 / 500] average reconstruction error: 0.000640
+Epoch [277 / 500] average wrong pixels [validation]: 0.375208
+Epoch [277 / 500] average reconstruction error [validation]: 0.000564
+Epoch [278 / 500] average wrong pixels: 0.375299
+Epoch [278 / 500] average reconstruction error: 0.000535
+Epoch [278 / 500] average wrong pixels [validation]: 0.374846
+Epoch [278 / 500] average reconstruction error [validation]: 0.000564
+Epoch [279 / 500] average wrong pixels: 0.374958
+Epoch [279 / 500] average reconstruction error: 0.000489
+Epoch [279 / 500] average wrong pixels [validation]: 0.374491
+Epoch [279 / 500] average reconstruction error [validation]: 0.000564
+Epoch [280 / 500] average wrong pixels: 0.374588
+Epoch [280 / 500] average reconstruction error: 0.000517
+Epoch [280 / 500] average wrong pixels [validation]: 0.374111
+Epoch [280 / 500] average reconstruction error [validation]: 0.000564
+Epoch [281 / 500] average wrong pixels: 0.374201
+Epoch [281 / 500] average reconstruction error: 0.000739
+Epoch [281 / 500] average wrong pixels [validation]: 0.373848
+Epoch [281 / 500] average reconstruction error [validation]: 0.000564
+Epoch [282 / 500] average wrong pixels: 0.374014
+Epoch [282 / 500] average reconstruction error: 0.000565
+Epoch [282 / 500] average wrong pixels [validation]: 0.373553
+Epoch [282 / 500] average reconstruction error [validation]: 0.000563
+Epoch [283 / 500] average wrong pixels: 0.373673
+Epoch [283 / 500] average reconstruction error: 0.000517
+Epoch [283 / 500] average wrong pixels [validation]: 0.373209
+Epoch [283 / 500] average reconstruction error [validation]: 0.000563
+Epoch [284 / 500] average wrong pixels: 0.373322
+Epoch [284 / 500] average reconstruction error: 0.000606
+Epoch [284 / 500] average wrong pixels [validation]: 0.372856
+Epoch [284 / 500] average reconstruction error [validation]: 0.000563
+Epoch [285 / 500] average wrong pixels: 0.372978
+Epoch [285 / 500] average reconstruction error: 0.000513
+Epoch [285 / 500] average wrong pixels [validation]: 0.372541
+Epoch [285 / 500] average reconstruction error [validation]: 0.000563
+Epoch [286 / 500] average wrong pixels: 0.372695
+Epoch [286 / 500] average reconstruction error: 0.000487
+Epoch [286 / 500] average wrong pixels [validation]: 0.372239
+Epoch [286 / 500] average reconstruction error [validation]: 0.000563
+Epoch [287 / 500] average wrong pixels: 0.372372
+Epoch [287 / 500] average reconstruction error: 0.000472
+Epoch [287 / 500] average wrong pixels [validation]: 0.371939
+Epoch [287 / 500] average reconstruction error [validation]: 0.000563
+Epoch [288 / 500] average wrong pixels: 0.372047
+Epoch [288 / 500] average reconstruction error: 0.000497
+Epoch [288 / 500] average wrong pixels [validation]: 0.371606
+Epoch [288 / 500] average reconstruction error [validation]: 0.000563
+Epoch [289 / 500] average wrong pixels: 0.371707
+Epoch [289 / 500] average reconstruction error: 0.000503
+Epoch [289 / 500] average wrong pixels [validation]: 0.371258
+Epoch [289 / 500] average reconstruction error [validation]: 0.000562
+Epoch [290 / 500] average wrong pixels: 0.371367
+Epoch [290 / 500] average reconstruction error: 0.000506
+Epoch [290 / 500] average wrong pixels [validation]: 0.370918
+Epoch [290 / 500] average reconstruction error [validation]: 0.000562
+Epoch [291 / 500] average wrong pixels: 0.371030
+Epoch [291 / 500] average reconstruction error: 0.000499
+Epoch [291 / 500] average wrong pixels [validation]: 0.370584
+Epoch [291 / 500] average reconstruction error [validation]: 0.000562
+Epoch [292 / 500] average wrong pixels: 0.370698
+Epoch [292 / 500] average reconstruction error: 0.000537
+Epoch [292 / 500] average wrong pixels [validation]: 0.370234
+Epoch [292 / 500] average reconstruction error [validation]: 0.000562
+Epoch [293 / 500] average wrong pixels: 0.370354
+Epoch [293 / 500] average reconstruction error: 0.000523
+Epoch [293 / 500] average wrong pixels [validation]: 0.369891
+Epoch [293 / 500] average reconstruction error [validation]: 0.000562
+Epoch [294 / 500] average wrong pixels: 0.369994
+Epoch [294 / 500] average reconstruction error: 0.000604
+Epoch [294 / 500] average wrong pixels [validation]: 0.369556
+Epoch [294 / 500] average reconstruction error [validation]: 0.000562
+Epoch [295 / 500] average wrong pixels: 0.369659
+Epoch [295 / 500] average reconstruction error: 0.000495
+Epoch [295 / 500] average wrong pixels [validation]: 0.369238
+Epoch [295 / 500] average reconstruction error [validation]: 0.000562
+Epoch [296 / 500] average wrong pixels: 0.369350
+Epoch [296 / 500] average reconstruction error: 0.000512
+Epoch [296 / 500] average wrong pixels [validation]: 0.368878
+Epoch [296 / 500] average reconstruction error [validation]: 0.000561
+Epoch [297 / 500] average wrong pixels: 0.368969
+Epoch [297 / 500] average reconstruction error: 0.000537
+Epoch [297 / 500] average wrong pixels [validation]: 0.368545
+Epoch [297 / 500] average reconstruction error [validation]: 0.000561
+Epoch [298 / 500] average wrong pixels: 0.368613
+Epoch [298 / 500] average reconstruction error: 0.000470
+Epoch [298 / 500] average wrong pixels [validation]: 0.368185
+Epoch [298 / 500] average reconstruction error [validation]: 0.000561
+Epoch [299 / 500] average wrong pixels: 0.368290
+Epoch [299 / 500] average reconstruction error: 0.000513
+Epoch [299 / 500] average wrong pixels [validation]: 0.367766
+Epoch [299 / 500] average reconstruction error [validation]: 0.000561
+Epoch [300 / 500] average wrong pixels: 0.367697
+Epoch [300 / 500] average reconstruction error: 0.000510
+Epoch [300 / 500] average wrong pixels [validation]: 0.367228
+Epoch [300 / 500] average reconstruction error [validation]: 0.000561
+Epoch [301 / 500] average wrong pixels: 0.367292
+Epoch [301 / 500] average reconstruction error: 0.000492
+Epoch [301 / 500] average wrong pixels [validation]: 0.366508
+Epoch [301 / 500] average reconstruction error [validation]: 0.000561
+Epoch [302 / 500] average wrong pixels: 0.366583
+Epoch [302 / 500] average reconstruction error: 0.000639
+Epoch [302 / 500] average wrong pixels [validation]: 0.366075
+Epoch [302 / 500] average reconstruction error [validation]: 0.000561
+Epoch [303 / 500] average wrong pixels: 0.366142
+Epoch [303 / 500] average reconstruction error: 0.000573
+Epoch [303 / 500] average wrong pixels [validation]: 0.365692
+Epoch [303 / 500] average reconstruction error [validation]: 0.000561
+Epoch [304 / 500] average wrong pixels: 0.365769
+Epoch [304 / 500] average reconstruction error: 0.000577
+Epoch [304 / 500] average wrong pixels [validation]: 0.365315
+Epoch [304 / 500] average reconstruction error [validation]: 0.000560
+Epoch [305 / 500] average wrong pixels: 0.365427
+Epoch [305 / 500] average reconstruction error: 0.000528
+Epoch [305 / 500] average wrong pixels [validation]: 0.365039
+Epoch [305 / 500] average reconstruction error [validation]: 0.000560
+Epoch [306 / 500] average wrong pixels: 0.365135
+Epoch [306 / 500] average reconstruction error: 0.000597
+Epoch [306 / 500] average wrong pixels [validation]: 0.364685
+Epoch [306 / 500] average reconstruction error [validation]: 0.000560
+Epoch [307 / 500] average wrong pixels: 0.364756
+Epoch [307 / 500] average reconstruction error: 0.000547
+Epoch [307 / 500] average wrong pixels [validation]: 0.364362
+Epoch [307 / 500] average reconstruction error [validation]: 0.000560
+Epoch [308 / 500] average wrong pixels: 0.364489
+Epoch [308 / 500] average reconstruction error: 0.000469
+Epoch [308 / 500] average wrong pixels [validation]: 0.364105
+Epoch [308 / 500] average reconstruction error [validation]: 0.000560
+Epoch [309 / 500] average wrong pixels: 0.364214
+Epoch [309 / 500] average reconstruction error: 0.000488
+Epoch [309 / 500] average wrong pixels [validation]: 0.363820
+Epoch [309 / 500] average reconstruction error [validation]: 0.000560
+Epoch [310 / 500] average wrong pixels: 0.363942
+Epoch [310 / 500] average reconstruction error: 0.000499
+Epoch [310 / 500] average wrong pixels [validation]: 0.363555
+Epoch [310 / 500] average reconstruction error [validation]: 0.000560
+Epoch [311 / 500] average wrong pixels: 0.363653
+Epoch [311 / 500] average reconstruction error: 0.000498
+Epoch [311 / 500] average wrong pixels [validation]: 0.363295
+Epoch [311 / 500] average reconstruction error [validation]: 0.000560
+Epoch [312 / 500] average wrong pixels: 0.363439
+Epoch [312 / 500] average reconstruction error: 0.000488
+Epoch [312 / 500] average wrong pixels [validation]: 0.363062
+Epoch [312 / 500] average reconstruction error [validation]: 0.000560
+Epoch [313 / 500] average wrong pixels: 0.363182
+Epoch [313 / 500] average reconstruction error: 0.000501
+Epoch [313 / 500] average wrong pixels [validation]: 0.362806
+Epoch [313 / 500] average reconstruction error [validation]: 0.000559
+Epoch [314 / 500] average wrong pixels: 0.362947
+Epoch [314 / 500] average reconstruction error: 0.000733
+Epoch [314 / 500] average wrong pixels [validation]: 0.362553
+Epoch [314 / 500] average reconstruction error [validation]: 0.000559
+Epoch [315 / 500] average wrong pixels: 0.362673
+Epoch [315 / 500] average reconstruction error: 0.000549
+Epoch [315 / 500] average wrong pixels [validation]: 0.362286
+Epoch [315 / 500] average reconstruction error [validation]: 0.000559
+Epoch [316 / 500] average wrong pixels: 0.362409
+Epoch [316 / 500] average reconstruction error: 0.000502
+Epoch [316 / 500] average wrong pixels [validation]: 0.362009
+Epoch [316 / 500] average reconstruction error [validation]: 0.000559
+Epoch [317 / 500] average wrong pixels: 0.362099
+Epoch [317 / 500] average reconstruction error: 0.000601
+Epoch [317 / 500] average wrong pixels [validation]: 0.361699
+Epoch [317 / 500] average reconstruction error [validation]: 0.000559
+Epoch [318 / 500] average wrong pixels: 0.361794
+Epoch [318 / 500] average reconstruction error: 0.000499
+Epoch [318 / 500] average wrong pixels [validation]: 0.361426
+Epoch [318 / 500] average reconstruction error [validation]: 0.000559
+Epoch [319 / 500] average wrong pixels: 0.361537
+Epoch [319 / 500] average reconstruction error: 0.000468
+Epoch [319 / 500] average wrong pixels [validation]: 0.361154
+Epoch [319 / 500] average reconstruction error [validation]: 0.000559
+Epoch [320 / 500] average wrong pixels: 0.361248
+Epoch [320 / 500] average reconstruction error: 0.001053
+Epoch [320 / 500] average wrong pixels [validation]: 0.360870
+Epoch [320 / 500] average reconstruction error [validation]: 0.000559
+Epoch [321 / 500] average wrong pixels: 0.360984
+Epoch [321 / 500] average reconstruction error: 0.000517
+Epoch [321 / 500] average wrong pixels [validation]: 0.360625
+Epoch [321 / 500] average reconstruction error [validation]: 0.000559
+Epoch [322 / 500] average wrong pixels: 0.360782
+Epoch [322 / 500] average reconstruction error: 0.000733
+Epoch [322 / 500] average wrong pixels [validation]: 0.360396
+Epoch [322 / 500] average reconstruction error [validation]: 0.000558
+Epoch [323 / 500] average wrong pixels: 0.360532
+Epoch [323 / 500] average reconstruction error: 0.000483
+Epoch [323 / 500] average wrong pixels [validation]: 0.360129
+Epoch [323 / 500] average reconstruction error [validation]: 0.000558
+Epoch [324 / 500] average wrong pixels: 0.360241
+Epoch [324 / 500] average reconstruction error: 0.000605
+Epoch [324 / 500] average wrong pixels [validation]: 0.359843
+Epoch [324 / 500] average reconstruction error [validation]: 0.000558
+Epoch [325 / 500] average wrong pixels: 0.359937
+Epoch [325 / 500] average reconstruction error: 0.000480
+Epoch [325 / 500] average wrong pixels [validation]: 0.359542
+Epoch [325 / 500] average reconstruction error [validation]: 0.000558
+Epoch [326 / 500] average wrong pixels: 0.359656
+Epoch [326 / 500] average reconstruction error: 0.000543
+Epoch [326 / 500] average wrong pixels [validation]: 0.359263
+Epoch [326 / 500] average reconstruction error [validation]: 0.000558
+Epoch [327 / 500] average wrong pixels: 0.359386
+Epoch [327 / 500] average reconstruction error: 0.000487
+Epoch [327 / 500] average wrong pixels [validation]: 0.358974
+Epoch [327 / 500] average reconstruction error [validation]: 0.000558
+Epoch [328 / 500] average wrong pixels: 0.359076
+Epoch [328 / 500] average reconstruction error: 0.000651
+Epoch [328 / 500] average wrong pixels [validation]: 0.358668
+Epoch [328 / 500] average reconstruction error [validation]: 0.000558
+Epoch [329 / 500] average wrong pixels: 0.358791
+Epoch [329 / 500] average reconstruction error: 0.000547
+Epoch [329 / 500] average wrong pixels [validation]: 0.358377
+Epoch [329 / 500] average reconstruction error [validation]: 0.000558
+Epoch [330 / 500] average wrong pixels: 0.358494
+Epoch [330 / 500] average reconstruction error: 0.000503
+Epoch [330 / 500] average wrong pixels [validation]: 0.358076
+Epoch [330 / 500] average reconstruction error [validation]: 0.000558
+Epoch [331 / 500] average wrong pixels: 0.358209
+Epoch [331 / 500] average reconstruction error: 0.000528
+Epoch [331 / 500] average wrong pixels [validation]: 0.357785
+Epoch [331 / 500] average reconstruction error [validation]: 0.000558
+Epoch [332 / 500] average wrong pixels: 0.357896
+Epoch [332 / 500] average reconstruction error: 0.000524
+Epoch [332 / 500] average wrong pixels [validation]: 0.357463
+Epoch [332 / 500] average reconstruction error [validation]: 0.000558
+Epoch [333 / 500] average wrong pixels: 0.357567
+Epoch [333 / 500] average reconstruction error: 0.000704
+Epoch [333 / 500] average wrong pixels [validation]: 0.357174
+Epoch [333 / 500] average reconstruction error [validation]: 0.000558
+Epoch [334 / 500] average wrong pixels: 0.357270
+Epoch [334 / 500] average reconstruction error: 0.000551
+Epoch [334 / 500] average wrong pixels [validation]: 0.356905
+Epoch [334 / 500] average reconstruction error [validation]: 0.000557
+Epoch [335 / 500] average wrong pixels: 0.357017
+Epoch [335 / 500] average reconstruction error: 0.000604
+Epoch [335 / 500] average wrong pixels [validation]: 0.356654
+Epoch [335 / 500] average reconstruction error [validation]: 0.000557
+Epoch [336 / 500] average wrong pixels: 0.356756
+Epoch [336 / 500] average reconstruction error: 0.000522
+Epoch [336 / 500] average wrong pixels [validation]: 0.356382
+Epoch [336 / 500] average reconstruction error [validation]: 0.000557
+Epoch [337 / 500] average wrong pixels: 0.356483
+Epoch [337 / 500] average reconstruction error: 0.000643
+Epoch [337 / 500] average wrong pixels [validation]: 0.356022
+Epoch [337 / 500] average reconstruction error [validation]: 0.000557
+Epoch [338 / 500] average wrong pixels: 0.356087
+Epoch [338 / 500] average reconstruction error: 0.000494
+Epoch [338 / 500] average wrong pixels [validation]: 0.355718
+Epoch [338 / 500] average reconstruction error [validation]: 0.000557
+Epoch [339 / 500] average wrong pixels: 0.355848
+Epoch [339 / 500] average reconstruction error: 0.000521
+Epoch [339 / 500] average wrong pixels [validation]: 0.355458
+Epoch [339 / 500] average reconstruction error [validation]: 0.000557
+Epoch [340 / 500] average wrong pixels: 0.355591
+Epoch [340 / 500] average reconstruction error: 0.000498
+Epoch [340 / 500] average wrong pixels [validation]: 0.355191
+Epoch [340 / 500] average reconstruction error [validation]: 0.000557
+Epoch [341 / 500] average wrong pixels: 0.355379
+Epoch [341 / 500] average reconstruction error: 0.000495
+Epoch [341 / 500] average wrong pixels [validation]: 0.355020
+Epoch [341 / 500] average reconstruction error [validation]: 0.000557
+Epoch [342 / 500] average wrong pixels: 0.355223
+Epoch [342 / 500] average reconstruction error: 0.000556
+Epoch [342 / 500] average wrong pixels [validation]: 0.354883
+Epoch [342 / 500] average reconstruction error [validation]: 0.000557
+Epoch [343 / 500] average wrong pixels: 0.355010
+Epoch [343 / 500] average reconstruction error: 0.000605
+Epoch [343 / 500] average wrong pixels [validation]: 0.354677
+Epoch [343 / 500] average reconstruction error [validation]: 0.000557
+Epoch [344 / 500] average wrong pixels: 0.354831
+Epoch [344 / 500] average reconstruction error: 0.000493
+Epoch [344 / 500] average wrong pixels [validation]: 0.354494
+Epoch [344 / 500] average reconstruction error [validation]: 0.000557
+Epoch [345 / 500] average wrong pixels: 0.354618
+Epoch [345 / 500] average reconstruction error: 0.000637
+Epoch [345 / 500] average wrong pixels [validation]: 0.354298
+Epoch [345 / 500] average reconstruction error [validation]: 0.000557
+Epoch [346 / 500] average wrong pixels: 0.354420
+Epoch [346 / 500] average reconstruction error: 0.000466
+Epoch [346 / 500] average wrong pixels [validation]: 0.354069
+Epoch [346 / 500] average reconstruction error [validation]: 0.000557
+Epoch [347 / 500] average wrong pixels: 0.354208
+Epoch [347 / 500] average reconstruction error: 0.000488
+Epoch [347 / 500] average wrong pixels [validation]: 0.353843
+Epoch [347 / 500] average reconstruction error [validation]: 0.000556
+Epoch [348 / 500] average wrong pixels: 0.353970
+Epoch [348 / 500] average reconstruction error: 0.000611
+Epoch [348 / 500] average wrong pixels [validation]: 0.353647
+Epoch [348 / 500] average reconstruction error [validation]: 0.000556
+Epoch [349 / 500] average wrong pixels: 0.353769
+Epoch [349 / 500] average reconstruction error: 0.000621
+Epoch [349 / 500] average wrong pixels [validation]: 0.353416
+Epoch [349 / 500] average reconstruction error [validation]: 0.000556
+Epoch [350 / 500] average wrong pixels: 0.353569
+Epoch [350 / 500] average reconstruction error: 0.000516
+Epoch [350 / 500] average wrong pixels [validation]: 0.353294
+Epoch [350 / 500] average reconstruction error [validation]: 0.000556
+Epoch [351 / 500] average wrong pixels: 0.353477
+Epoch [351 / 500] average reconstruction error: 0.000595
+Epoch [351 / 500] average wrong pixels [validation]: 0.353160
+Epoch [351 / 500] average reconstruction error [validation]: 0.000556
+Epoch [352 / 500] average wrong pixels: 0.353290
+Epoch [352 / 500] average reconstruction error: 0.000539
+Epoch [352 / 500] average wrong pixels [validation]: 0.352947
+Epoch [352 / 500] average reconstruction error [validation]: 0.000556
+Epoch [353 / 500] average wrong pixels: 0.353078
+Epoch [353 / 500] average reconstruction error: 0.000511
+Epoch [353 / 500] average wrong pixels [validation]: 0.352765
+Epoch [353 / 500] average reconstruction error [validation]: 0.000556
+Epoch [354 / 500] average wrong pixels: 0.352895
+Epoch [354 / 500] average reconstruction error: 0.000479
+Epoch [354 / 500] average wrong pixels [validation]: 0.352548
+Epoch [354 / 500] average reconstruction error [validation]: 0.000556
+Epoch [355 / 500] average wrong pixels: 0.352663
+Epoch [355 / 500] average reconstruction error: 0.000544
+Epoch [355 / 500] average wrong pixels [validation]: 0.352330
+Epoch [355 / 500] average reconstruction error [validation]: 0.000556
+Epoch [356 / 500] average wrong pixels: 0.352507
+Epoch [356 / 500] average reconstruction error: 0.000503
+Epoch [356 / 500] average wrong pixels [validation]: 0.352036
+Epoch [356 / 500] average reconstruction error [validation]: 0.000556
+Epoch [357 / 500] average wrong pixels: 0.352105
+Epoch [357 / 500] average reconstruction error: 0.000531
+Epoch [357 / 500] average wrong pixels [validation]: 0.351787
+Epoch [357 / 500] average reconstruction error [validation]: 0.000556
+Epoch [358 / 500] average wrong pixels: 0.351972
+Epoch [358 / 500] average reconstruction error: 0.000650
+Epoch [358 / 500] average wrong pixels [validation]: 0.351715
+Epoch [358 / 500] average reconstruction error [validation]: 0.000556
+Epoch [359 / 500] average wrong pixels: 0.351864
+Epoch [359 / 500] average reconstruction error: 0.000508
+Epoch [359 / 500] average wrong pixels [validation]: 0.351712
+Epoch [359 / 500] average reconstruction error [validation]: 0.000556
+Epoch [360 / 500] average wrong pixels: 0.351913
+Epoch [360 / 500] average reconstruction error: 0.000493
+Epoch [360 / 500] average wrong pixels [validation]: 0.351658
+Epoch [360 / 500] average reconstruction error [validation]: 0.000556
+Epoch [361 / 500] average wrong pixels: 0.351834
+Epoch [361 / 500] average reconstruction error: 0.000501
+Epoch [361 / 500] average wrong pixels [validation]: 0.351561
+Epoch [361 / 500] average reconstruction error [validation]: 0.000555
+Epoch [362 / 500] average wrong pixels: 0.351683
+Epoch [362 / 500] average reconstruction error: 0.000533
+Epoch [362 / 500] average wrong pixels [validation]: 0.351352
+Epoch [362 / 500] average reconstruction error [validation]: 0.000555
+Epoch [363 / 500] average wrong pixels: 0.351495
+Epoch [363 / 500] average reconstruction error: 0.000618
+Epoch [363 / 500] average wrong pixels [validation]: 0.351175
+Epoch [363 / 500] average reconstruction error [validation]: 0.000555
+Epoch [364 / 500] average wrong pixels: 0.351300
+Epoch [364 / 500] average reconstruction error: 0.000615
+Epoch [364 / 500] average wrong pixels [validation]: 0.350973
+Epoch [364 / 500] average reconstruction error [validation]: 0.000555
+Epoch [365 / 500] average wrong pixels: 0.351101
+Epoch [365 / 500] average reconstruction error: 0.000730
+Epoch [365 / 500] average wrong pixels [validation]: 0.350763
+Epoch [365 / 500] average reconstruction error [validation]: 0.000555
+Epoch [366 / 500] average wrong pixels: 0.350875
+Epoch [366 / 500] average reconstruction error: 0.000495
+Epoch [366 / 500] average wrong pixels [validation]: 0.350545
+Epoch [366 / 500] average reconstruction error [validation]: 0.000555
+Epoch [367 / 500] average wrong pixels: 0.350660
+Epoch [367 / 500] average reconstruction error: 0.000589
+Epoch [367 / 500] average wrong pixels [validation]: 0.350335
+Epoch [367 / 500] average reconstruction error [validation]: 0.000555
+Epoch [368 / 500] average wrong pixels: 0.350473
+Epoch [368 / 500] average reconstruction error: 0.000606
+Epoch [368 / 500] average wrong pixels [validation]: 0.350148
+Epoch [368 / 500] average reconstruction error [validation]: 0.000555
+Epoch [369 / 500] average wrong pixels: 0.350287
+Epoch [369 / 500] average reconstruction error: 0.000616
+Epoch [369 / 500] average wrong pixels [validation]: 0.349971
+Epoch [369 / 500] average reconstruction error [validation]: 0.000555
+Epoch [370 / 500] average wrong pixels: 0.350086
+Epoch [370 / 500] average reconstruction error: 0.000536
+Epoch [370 / 500] average wrong pixels [validation]: 0.349737
+Epoch [370 / 500] average reconstruction error [validation]: 0.000555
+Epoch [371 / 500] average wrong pixels: 0.349869
+Epoch [371 / 500] average reconstruction error: 0.000524
+Epoch [371 / 500] average wrong pixels [validation]: 0.349520
+Epoch [371 / 500] average reconstruction error [validation]: 0.000555
+Epoch [372 / 500] average wrong pixels: 0.349642
+Epoch [372 / 500] average reconstruction error: 0.000483
+Epoch [372 / 500] average wrong pixels [validation]: 0.349273
+Epoch [372 / 500] average reconstruction error [validation]: 0.000555
+Epoch [373 / 500] average wrong pixels: 0.349362
+Epoch [373 / 500] average reconstruction error: 0.000488
+Epoch [373 / 500] average wrong pixels [validation]: 0.348993
+Epoch [373 / 500] average reconstruction error [validation]: 0.000555
+Epoch [374 / 500] average wrong pixels: 0.349055
+Epoch [374 / 500] average reconstruction error: 0.000542
+Epoch [374 / 500] average wrong pixels [validation]: 0.348621
+Epoch [374 / 500] average reconstruction error [validation]: 0.000555
+Epoch [375 / 500] average wrong pixels: 0.348656
+Epoch [375 / 500] average reconstruction error: 0.000606
+Epoch [375 / 500] average wrong pixels [validation]: 0.348340
+Epoch [375 / 500] average reconstruction error [validation]: 0.000555
+Epoch [376 / 500] average wrong pixels: 0.348523
+Epoch [376 / 500] average reconstruction error: 0.000480
+Epoch [376 / 500] average wrong pixels [validation]: 0.348204
+Epoch [376 / 500] average reconstruction error [validation]: 0.000555
+Epoch [377 / 500] average wrong pixels: 0.348337
+Epoch [377 / 500] average reconstruction error: 0.000556
+Epoch [377 / 500] average wrong pixels [validation]: 0.348065
+Epoch [377 / 500] average reconstruction error [validation]: 0.000555
+Epoch [378 / 500] average wrong pixels: 0.348197
+Epoch [378 / 500] average reconstruction error: 0.000493
+Epoch [378 / 500] average wrong pixels [validation]: 0.347859
+Epoch [378 / 500] average reconstruction error [validation]: 0.000555
+Epoch [379 / 500] average wrong pixels: 0.347981
+Epoch [379 / 500] average reconstruction error: 0.000478
+Epoch [379 / 500] average wrong pixels [validation]: 0.347623
+Epoch [379 / 500] average reconstruction error [validation]: 0.000554
+Epoch [380 / 500] average wrong pixels: 0.347737
+Epoch [380 / 500] average reconstruction error: 0.000522
+Epoch [380 / 500] average wrong pixels [validation]: 0.347376
+Epoch [380 / 500] average reconstruction error [validation]: 0.000554
+Epoch [381 / 500] average wrong pixels: 0.347517
+Epoch [381 / 500] average reconstruction error: 0.000479
+Epoch [381 / 500] average wrong pixels [validation]: 0.347167
+Epoch [381 / 500] average reconstruction error [validation]: 0.000554
+Epoch [382 / 500] average wrong pixels: 0.347270
+Epoch [382 / 500] average reconstruction error: 0.000502
+Epoch [382 / 500] average wrong pixels [validation]: 0.346945
+Epoch [382 / 500] average reconstruction error [validation]: 0.000554
+Epoch [383 / 500] average wrong pixels: 0.347076
+Epoch [383 / 500] average reconstruction error: 0.000506
+Epoch [383 / 500] average wrong pixels [validation]: 0.346750
+Epoch [383 / 500] average reconstruction error [validation]: 0.000554
+Epoch [384 / 500] average wrong pixels: 0.346887
+Epoch [384 / 500] average reconstruction error: 0.000487
+Epoch [384 / 500] average wrong pixels [validation]: 0.346574
+Epoch [384 / 500] average reconstruction error [validation]: 0.000554
+Epoch [385 / 500] average wrong pixels: 0.346700
+Epoch [385 / 500] average reconstruction error: 0.000570
+Epoch [385 / 500] average wrong pixels [validation]: 0.346376
+Epoch [385 / 500] average reconstruction error [validation]: 0.000554
+Epoch [386 / 500] average wrong pixels: 0.346492
+Epoch [386 / 500] average reconstruction error: 0.000504
+Epoch [386 / 500] average wrong pixels [validation]: 0.346170
+Epoch [386 / 500] average reconstruction error [validation]: 0.000554
+Epoch [387 / 500] average wrong pixels: 0.346280
+Epoch [387 / 500] average reconstruction error: 0.000494
+Epoch [387 / 500] average wrong pixels [validation]: 0.345959
+Epoch [387 / 500] average reconstruction error [validation]: 0.000554
+Epoch [388 / 500] average wrong pixels: 0.346074
+Epoch [388 / 500] average reconstruction error: 0.000646
+Epoch [388 / 500] average wrong pixels [validation]: 0.345746
+Epoch [388 / 500] average reconstruction error [validation]: 0.000554
+Epoch [389 / 500] average wrong pixels: 0.345872
+Epoch [389 / 500] average reconstruction error: 0.000515
+Epoch [389 / 500] average wrong pixels [validation]: 0.345546
+Epoch [389 / 500] average reconstruction error [validation]: 0.000554
+Epoch [390 / 500] average wrong pixels: 0.345657
+Epoch [390 / 500] average reconstruction error: 0.000559
+Epoch [390 / 500] average wrong pixels [validation]: 0.345338
+Epoch [390 / 500] average reconstruction error [validation]: 0.000554
+Epoch [391 / 500] average wrong pixels: 0.345447
+Epoch [391 / 500] average reconstruction error: 0.000485
+Epoch [391 / 500] average wrong pixels [validation]: 0.345127
+Epoch [391 / 500] average reconstruction error [validation]: 0.000554
+Epoch [392 / 500] average wrong pixels: 0.345257
+Epoch [392 / 500] average reconstruction error: 0.000548
+Epoch [392 / 500] average wrong pixels [validation]: 0.344941
+Epoch [392 / 500] average reconstruction error [validation]: 0.000554
+Epoch [393 / 500] average wrong pixels: 0.345064
+Epoch [393 / 500] average reconstruction error: 0.000634
+Epoch [393 / 500] average wrong pixels [validation]: 0.344745
+Epoch [393 / 500] average reconstruction error [validation]: 0.000554
+Epoch [394 / 500] average wrong pixels: 0.344872
+Epoch [394 / 500] average reconstruction error: 0.000545
+Epoch [394 / 500] average wrong pixels [validation]: 0.344581
+Epoch [394 / 500] average reconstruction error [validation]: 0.000554
+Epoch [395 / 500] average wrong pixels: 0.344690
+Epoch [395 / 500] average reconstruction error: 0.000500
+Epoch [395 / 500] average wrong pixels [validation]: 0.344376
+Epoch [395 / 500] average reconstruction error [validation]: 0.000554
+Epoch [396 / 500] average wrong pixels: 0.344490
+Epoch [396 / 500] average reconstruction error: 0.000491
+Epoch [396 / 500] average wrong pixels [validation]: 0.344175
+Epoch [396 / 500] average reconstruction error [validation]: 0.000554
+Epoch [397 / 500] average wrong pixels: 0.344303
+Epoch [397 / 500] average reconstruction error: 0.000519
+Epoch [397 / 500] average wrong pixels [validation]: 0.344029
+Epoch [397 / 500] average reconstruction error [validation]: 0.000554
+Epoch [398 / 500] average wrong pixels: 0.344130
+Epoch [398 / 500] average reconstruction error: 0.000527
+Epoch [398 / 500] average wrong pixels [validation]: 0.343828
+Epoch [398 / 500] average reconstruction error [validation]: 0.000554
+Epoch [399 / 500] average wrong pixels: 0.343946
+Epoch [399 / 500] average reconstruction error: 0.000503
+Epoch [399 / 500] average wrong pixels [validation]: 0.343627
+Epoch [399 / 500] average reconstruction error [validation]: 0.000554
+Epoch [400 / 500] average wrong pixels: 0.343733
+Epoch [400 / 500] average reconstruction error: 0.000569
+Epoch [400 / 500] average wrong pixels [validation]: 0.343435
+Epoch [400 / 500] average reconstruction error [validation]: 0.000554
+Epoch [401 / 500] average wrong pixels: 0.343572
+Epoch [401 / 500] average reconstruction error: 0.000581
+Epoch [401 / 500] average wrong pixels [validation]: 0.343278
+Epoch [401 / 500] average reconstruction error [validation]: 0.000553
+Epoch [402 / 500] average wrong pixels: 0.343447
+Epoch [402 / 500] average reconstruction error: 0.000544
+Epoch [402 / 500] average wrong pixels [validation]: 0.343160
+Epoch [402 / 500] average reconstruction error [validation]: 0.000553
+Epoch [403 / 500] average wrong pixels: 0.343283
+Epoch [403 / 500] average reconstruction error: 0.000631
+Epoch [403 / 500] average wrong pixels [validation]: 0.343038
+Epoch [403 / 500] average reconstruction error [validation]: 0.000553
+Epoch [404 / 500] average wrong pixels: 0.343225
+Epoch [404 / 500] average reconstruction error: 0.000503
+Epoch [404 / 500] average wrong pixels [validation]: 0.342967
+Epoch [404 / 500] average reconstruction error [validation]: 0.000553
+Epoch [405 / 500] average wrong pixels: 0.343104
+Epoch [405 / 500] average reconstruction error: 0.000495
+Epoch [405 / 500] average wrong pixels [validation]: 0.342887
+Epoch [405 / 500] average reconstruction error [validation]: 0.000553
+Epoch [406 / 500] average wrong pixels: 0.343038
+Epoch [406 / 500] average reconstruction error: 0.000651
+Epoch [406 / 500] average wrong pixels [validation]: 0.342809
+Epoch [406 / 500] average reconstruction error [validation]: 0.000553
+Epoch [407 / 500] average wrong pixels: 0.342944
+Epoch [407 / 500] average reconstruction error: 0.000492
+Epoch [407 / 500] average wrong pixels [validation]: 0.342673
+Epoch [407 / 500] average reconstruction error [validation]: 0.000553
+Epoch [408 / 500] average wrong pixels: 0.342822
+Epoch [408 / 500] average reconstruction error: 0.000483
+Epoch [408 / 500] average wrong pixels [validation]: 0.342533
+Epoch [408 / 500] average reconstruction error [validation]: 0.000553
+Epoch [409 / 500] average wrong pixels: 0.342674
+Epoch [409 / 500] average reconstruction error: 0.000496
+Epoch [409 / 500] average wrong pixels [validation]: 0.342421
+Epoch [409 / 500] average reconstruction error [validation]: 0.000553
+Epoch [410 / 500] average wrong pixels: 0.342553
+Epoch [410 / 500] average reconstruction error: 0.000525
+Epoch [410 / 500] average wrong pixels [validation]: 0.342267
+Epoch [410 / 500] average reconstruction error [validation]: 0.000553
+Epoch [411 / 500] average wrong pixels: 0.342401
+Epoch [411 / 500] average reconstruction error: 0.000565
+Epoch [411 / 500] average wrong pixels [validation]: 0.342130
+Epoch [411 / 500] average reconstruction error [validation]: 0.000553
+Epoch [412 / 500] average wrong pixels: 0.342266
+Epoch [412 / 500] average reconstruction error: 0.000462
+Epoch [412 / 500] average wrong pixels [validation]: 0.341968
+Epoch [412 / 500] average reconstruction error [validation]: 0.000553
+Epoch [413 / 500] average wrong pixels: 0.342115
+Epoch [413 / 500] average reconstruction error: 0.000567
+Epoch [413 / 500] average wrong pixels [validation]: 0.341805
+Epoch [413 / 500] average reconstruction error [validation]: 0.000553
+Epoch [414 / 500] average wrong pixels: 0.341934
+Epoch [414 / 500] average reconstruction error: 0.000605
+Epoch [414 / 500] average wrong pixels [validation]: 0.341644
+Epoch [414 / 500] average reconstruction error [validation]: 0.000553
+Epoch [415 / 500] average wrong pixels: 0.341782
+Epoch [415 / 500] average reconstruction error: 0.000500
+Epoch [415 / 500] average wrong pixels [validation]: 0.341489
+Epoch [415 / 500] average reconstruction error [validation]: 0.000553
+Epoch [416 / 500] average wrong pixels: 0.341627
+Epoch [416 / 500] average reconstruction error: 0.000511
+Epoch [416 / 500] average wrong pixels [validation]: 0.341323
+Epoch [416 / 500] average reconstruction error [validation]: 0.000553
+Epoch [417 / 500] average wrong pixels: 0.341423
+Epoch [417 / 500] average reconstruction error: 0.000552
+Epoch [417 / 500] average wrong pixels [validation]: 0.341109
+Epoch [417 / 500] average reconstruction error [validation]: 0.000553
+Epoch [418 / 500] average wrong pixels: 0.341243
+Epoch [418 / 500] average reconstruction error: 0.000462
+Epoch [418 / 500] average wrong pixels [validation]: 0.340918
+Epoch [418 / 500] average reconstruction error [validation]: 0.000553
+Epoch [419 / 500] average wrong pixels: 0.341042
+Epoch [419 / 500] average reconstruction error: 0.000476
+Epoch [419 / 500] average wrong pixels [validation]: 0.340733
+Epoch [419 / 500] average reconstruction error [validation]: 0.000553
+Epoch [420 / 500] average wrong pixels: 0.340847
+Epoch [420 / 500] average reconstruction error: 0.000687
+Epoch [420 / 500] average wrong pixels [validation]: 0.340523
+Epoch [420 / 500] average reconstruction error [validation]: 0.000553
+Epoch [421 / 500] average wrong pixels: 0.340628
+Epoch [421 / 500] average reconstruction error: 0.000478
+Epoch [421 / 500] average wrong pixels [validation]: 0.340312
+Epoch [421 / 500] average reconstruction error [validation]: 0.000553
+Epoch [422 / 500] average wrong pixels: 0.340437
+Epoch [422 / 500] average reconstruction error: 0.000473
+Epoch [422 / 500] average wrong pixels [validation]: 0.340080
+Epoch [422 / 500] average reconstruction error [validation]: 0.000553
+Epoch [423 / 500] average wrong pixels: 0.340193
+Epoch [423 / 500] average reconstruction error: 0.000515
+Epoch [423 / 500] average wrong pixels [validation]: 0.339607
+Epoch [423 / 500] average reconstruction error [validation]: 0.000553
+Epoch [424 / 500] average wrong pixels: 0.339647
+Epoch [424 / 500] average reconstruction error: 0.000519
+Epoch [424 / 500] average wrong pixels [validation]: 0.339369
+Epoch [424 / 500] average reconstruction error [validation]: 0.000553
+Epoch [425 / 500] average wrong pixels: 0.339547
+Epoch [425 / 500] average reconstruction error: 0.000480
+Epoch [425 / 500] average wrong pixels [validation]: 0.339313
+Epoch [425 / 500] average reconstruction error [validation]: 0.000553
+Epoch [426 / 500] average wrong pixels: 0.339471
+Epoch [426 / 500] average reconstruction error: 0.000462
+Epoch [426 / 500] average wrong pixels [validation]: 0.339205
+Epoch [426 / 500] average reconstruction error [validation]: 0.000553
+Epoch [427 / 500] average wrong pixels: 0.339339
+Epoch [427 / 500] average reconstruction error: 0.000482
+Epoch [427 / 500] average wrong pixels [validation]: 0.339035
+Epoch [427 / 500] average reconstruction error [validation]: 0.000552
+Epoch [428 / 500] average wrong pixels: 0.339162
+Epoch [428 / 500] average reconstruction error: 0.000499
+Epoch [428 / 500] average wrong pixels [validation]: 0.338852
+Epoch [428 / 500] average reconstruction error [validation]: 0.000552
+Epoch [429 / 500] average wrong pixels: 0.338964
+Epoch [429 / 500] average reconstruction error: 0.000482
+Epoch [429 / 500] average wrong pixels [validation]: 0.338642
+Epoch [429 / 500] average reconstruction error [validation]: 0.000552
+Epoch [430 / 500] average wrong pixels: 0.338763
+Epoch [430 / 500] average reconstruction error: 0.000521
+Epoch [430 / 500] average wrong pixels [validation]: 0.338418
+Epoch [430 / 500] average reconstruction error [validation]: 0.000552
+Epoch [431 / 500] average wrong pixels: 0.338514
+Epoch [431 / 500] average reconstruction error: 0.000535
+Epoch [431 / 500] average wrong pixels [validation]: 0.338173
+Epoch [431 / 500] average reconstruction error [validation]: 0.000552
+Epoch [432 / 500] average wrong pixels: 0.338273
+Epoch [432 / 500] average reconstruction error: 0.000461
+Epoch [432 / 500] average wrong pixels [validation]: 0.337943
+Epoch [432 / 500] average reconstruction error [validation]: 0.000552
+Epoch [433 / 500] average wrong pixels: 0.338025
+Epoch [433 / 500] average reconstruction error: 0.000461
+Epoch [433 / 500] average wrong pixels [validation]: 0.337709
+Epoch [433 / 500] average reconstruction error [validation]: 0.000552
+Epoch [434 / 500] average wrong pixels: 0.337812
+Epoch [434 / 500] average reconstruction error: 0.000484
+Epoch [434 / 500] average wrong pixels [validation]: 0.337496
+Epoch [434 / 500] average reconstruction error [validation]: 0.000552
+Epoch [435 / 500] average wrong pixels: 0.337593
+Epoch [435 / 500] average reconstruction error: 0.000481
+Epoch [435 / 500] average wrong pixels [validation]: 0.337290
+Epoch [435 / 500] average reconstruction error [validation]: 0.000552
+Epoch [436 / 500] average wrong pixels: 0.337412
+Epoch [436 / 500] average reconstruction error: 0.000677
+Epoch [436 / 500] average wrong pixels [validation]: 0.337086
+Epoch [436 / 500] average reconstruction error [validation]: 0.000552
+Epoch [437 / 500] average wrong pixels: 0.337198
+Epoch [437 / 500] average reconstruction error: 0.000480
+Epoch [437 / 500] average wrong pixels [validation]: 0.336900
+Epoch [437 / 500] average reconstruction error [validation]: 0.000552
+Epoch [438 / 500] average wrong pixels: 0.337025
+Epoch [438 / 500] average reconstruction error: 0.000511
+Epoch [438 / 500] average wrong pixels [validation]: 0.336721
+Epoch [438 / 500] average reconstruction error [validation]: 0.000552
+Epoch [439 / 500] average wrong pixels: 0.336861
+Epoch [439 / 500] average reconstruction error: 0.000493
+Epoch [439 / 500] average wrong pixels [validation]: 0.336553
+Epoch [439 / 500] average reconstruction error [validation]: 0.000552
+Epoch [440 / 500] average wrong pixels: 0.336665
+Epoch [440 / 500] average reconstruction error: 0.000630
+Epoch [440 / 500] average wrong pixels [validation]: 0.336359
+Epoch [440 / 500] average reconstruction error [validation]: 0.000552
+Epoch [441 / 500] average wrong pixels: 0.336489
+Epoch [441 / 500] average reconstruction error: 0.000471
+Epoch [441 / 500] average wrong pixels [validation]: 0.336176
+Epoch [441 / 500] average reconstruction error [validation]: 0.000552
+Epoch [442 / 500] average wrong pixels: 0.336291
+Epoch [442 / 500] average reconstruction error: 0.000556
+Epoch [442 / 500] average wrong pixels [validation]: 0.335973
+Epoch [442 / 500] average reconstruction error [validation]: 0.000552
+Epoch [443 / 500] average wrong pixels: 0.336122
+Epoch [443 / 500] average reconstruction error: 0.000473
+Epoch [443 / 500] average wrong pixels [validation]: 0.335812
+Epoch [443 / 500] average reconstruction error [validation]: 0.000552
+Epoch [444 / 500] average wrong pixels: 0.335942
+Epoch [444 / 500] average reconstruction error: 0.000461
+Epoch [444 / 500] average wrong pixels [validation]: 0.335622
+Epoch [444 / 500] average reconstruction error [validation]: 0.000552
+Epoch [445 / 500] average wrong pixels: 0.335742
+Epoch [445 / 500] average reconstruction error: 0.000498
+Epoch [445 / 500] average wrong pixels [validation]: 0.335468
+Epoch [445 / 500] average reconstruction error [validation]: 0.000552
+Epoch [446 / 500] average wrong pixels: 0.335583
+Epoch [446 / 500] average reconstruction error: 0.000837
+Epoch [446 / 500] average wrong pixels [validation]: 0.335259
+Epoch [446 / 500] average reconstruction error [validation]: 0.000552
+Epoch [447 / 500] average wrong pixels: 0.335351
+Epoch [447 / 500] average reconstruction error: 0.000494
+Epoch [447 / 500] average wrong pixels [validation]: 0.335043
+Epoch [447 / 500] average reconstruction error [validation]: 0.000552
+Epoch [448 / 500] average wrong pixels: 0.335184
+Epoch [448 / 500] average reconstruction error: 0.000525
+Epoch [448 / 500] average wrong pixels [validation]: 0.334837
+Epoch [448 / 500] average reconstruction error [validation]: 0.000552
+Epoch [449 / 500] average wrong pixels: 0.334941
+Epoch [449 / 500] average reconstruction error: 0.000475
+Epoch [449 / 500] average wrong pixels [validation]: 0.334628
+Epoch [449 / 500] average reconstruction error [validation]: 0.000552
+Epoch [450 / 500] average wrong pixels: 0.334755
+Epoch [450 / 500] average reconstruction error: 0.000461
+Epoch [450 / 500] average wrong pixels [validation]: 0.334416
+Epoch [450 / 500] average reconstruction error [validation]: 0.000552
+Epoch [451 / 500] average wrong pixels: 0.334521
+Epoch [451 / 500] average reconstruction error: 0.000504
+Epoch [451 / 500] average wrong pixels [validation]: 0.334200
+Epoch [451 / 500] average reconstruction error [validation]: 0.000552
+Epoch [452 / 500] average wrong pixels: 0.334307
+Epoch [452 / 500] average reconstruction error: 0.000477
+Epoch [452 / 500] average wrong pixels [validation]: 0.333953
+Epoch [452 / 500] average reconstruction error [validation]: 0.000552
+Epoch [453 / 500] average wrong pixels: 0.334085
+Epoch [453 / 500] average reconstruction error: 0.000564
+Epoch [453 / 500] average wrong pixels [validation]: 0.333671
+Epoch [453 / 500] average reconstruction error [validation]: 0.000552
+Epoch [454 / 500] average wrong pixels: 0.333469
+Epoch [454 / 500] average reconstruction error: 0.000501
+Epoch [454 / 500] average wrong pixels [validation]: 0.331940
+Epoch [454 / 500] average reconstruction error [validation]: 0.000552
+Epoch [455 / 500] average wrong pixels: 0.331884
+Epoch [455 / 500] average reconstruction error: 0.000652
+Epoch [455 / 500] average wrong pixels [validation]: 0.332135
+Epoch [455 / 500] average reconstruction error [validation]: 0.000552
+Epoch [456 / 500] average wrong pixels: 0.332431
+Epoch [456 / 500] average reconstruction error: 0.000475
+Epoch [456 / 500] average wrong pixels [validation]: 0.332214
+Epoch [456 / 500] average reconstruction error [validation]: 0.000552
+Epoch [457 / 500] average wrong pixels: 0.332396
+Epoch [457 / 500] average reconstruction error: 0.000524
+Epoch [457 / 500] average wrong pixels [validation]: 0.332198
+Epoch [457 / 500] average reconstruction error [validation]: 0.000552
+Epoch [458 / 500] average wrong pixels: 0.332333
+Epoch [458 / 500] average reconstruction error: 0.000491
+Epoch [458 / 500] average wrong pixels [validation]: 0.332051
+Epoch [458 / 500] average reconstruction error [validation]: 0.000552
+Epoch [459 / 500] average wrong pixels: 0.332198
+Epoch [459 / 500] average reconstruction error: 0.000471
+Epoch [459 / 500] average wrong pixels [validation]: 0.331786
+Epoch [459 / 500] average reconstruction error [validation]: 0.000552
+Epoch [460 / 500] average wrong pixels: 0.331844
+Epoch [460 / 500] average reconstruction error: 0.000543
+Epoch [460 / 500] average wrong pixels [validation]: 0.331580
+Epoch [460 / 500] average reconstruction error [validation]: 0.000552
+Epoch [461 / 500] average wrong pixels: 0.331706
+Epoch [461 / 500] average reconstruction error: 0.000503
+Epoch [461 / 500] average wrong pixels [validation]: 0.331495
+Epoch [461 / 500] average reconstruction error [validation]: 0.000551
+Epoch [462 / 500] average wrong pixels: 0.331641
+Epoch [462 / 500] average reconstruction error: 0.000524
+Epoch [462 / 500] average wrong pixels [validation]: 0.331410
+Epoch [462 / 500] average reconstruction error [validation]: 0.000551
+Epoch [463 / 500] average wrong pixels: 0.331561
+Epoch [463 / 500] average reconstruction error: 0.000622
+Epoch [463 / 500] average wrong pixels [validation]: 0.331290
+Epoch [463 / 500] average reconstruction error [validation]: 0.000551
+Epoch [464 / 500] average wrong pixels: 0.331426
+Epoch [464 / 500] average reconstruction error: 0.000501
+Epoch [464 / 500] average wrong pixels [validation]: 0.331175
+Epoch [464 / 500] average reconstruction error [validation]: 0.000551
+Epoch [465 / 500] average wrong pixels: 0.331320
+Epoch [465 / 500] average reconstruction error: 0.000795
+Epoch [465 / 500] average wrong pixels [validation]: 0.331507
+Epoch [465 / 500] average reconstruction error [validation]: 0.000551
+Epoch [466 / 500] average wrong pixels: 0.331957
+Epoch [466 / 500] average reconstruction error: 0.000498
+Epoch [466 / 500] average wrong pixels [validation]: 0.331845
+Epoch [466 / 500] average reconstruction error [validation]: 0.000551
+Epoch [467 / 500] average wrong pixels: 0.332020
+Epoch [467 / 500] average reconstruction error: 0.000480
+Epoch [467 / 500] average wrong pixels [validation]: 0.331779
+Epoch [467 / 500] average reconstruction error [validation]: 0.000551
+Epoch [468 / 500] average wrong pixels: 0.331885
+Epoch [468 / 500] average reconstruction error: 0.000473
+Epoch [468 / 500] average wrong pixels [validation]: 0.331589
+Epoch [468 / 500] average reconstruction error [validation]: 0.000551
+Epoch [469 / 500] average wrong pixels: 0.331699
+Epoch [469 / 500] average reconstruction error: 0.000506
+Epoch [469 / 500] average wrong pixels [validation]: 0.331368
+Epoch [469 / 500] average reconstruction error [validation]: 0.000551
+Epoch [470 / 500] average wrong pixels: 0.331495
+Epoch [470 / 500] average reconstruction error: 0.000538
+Epoch [470 / 500] average wrong pixels [validation]: 0.331218
+Epoch [470 / 500] average reconstruction error [validation]: 0.000551
+Epoch [471 / 500] average wrong pixels: 0.331323
+Epoch [471 / 500] average reconstruction error: 0.000559
+Epoch [471 / 500] average wrong pixels [validation]: 0.331025
+Epoch [471 / 500] average reconstruction error [validation]: 0.000551
+Epoch [472 / 500] average wrong pixels: 0.331153
+Epoch [472 / 500] average reconstruction error: 0.000670
+Epoch [472 / 500] average wrong pixels [validation]: 0.330845
+Epoch [472 / 500] average reconstruction error [validation]: 0.000551
+Epoch [473 / 500] average wrong pixels: 0.330958
+Epoch [473 / 500] average reconstruction error: 0.000643
+Epoch [473 / 500] average wrong pixels [validation]: 0.330653
+Epoch [473 / 500] average reconstruction error [validation]: 0.000551
+Epoch [474 / 500] average wrong pixels: 0.330775
+Epoch [474 / 500] average reconstruction error: 0.000486
+Epoch [474 / 500] average wrong pixels [validation]: 0.330474
+Epoch [474 / 500] average reconstruction error [validation]: 0.000551
+Epoch [475 / 500] average wrong pixels: 0.330569
+Epoch [475 / 500] average reconstruction error: 0.000514
+Epoch [475 / 500] average wrong pixels [validation]: 0.330282
+Epoch [475 / 500] average reconstruction error [validation]: 0.000551
+Epoch [476 / 500] average wrong pixels: 0.330408
+Epoch [476 / 500] average reconstruction error: 0.000517
+Epoch [476 / 500] average wrong pixels [validation]: 0.330104
+Epoch [476 / 500] average reconstruction error [validation]: 0.000551
+Epoch [477 / 500] average wrong pixels: 0.330211
+Epoch [477 / 500] average reconstruction error: 0.000499
+Epoch [477 / 500] average wrong pixels [validation]: 0.329891
+Epoch [477 / 500] average reconstruction error [validation]: 0.000551
+Epoch [478 / 500] average wrong pixels: 0.330004
+Epoch [478 / 500] average reconstruction error: 0.000460
+Epoch [478 / 500] average wrong pixels [validation]: 0.329688
+Epoch [478 / 500] average reconstruction error [validation]: 0.000551
+Epoch [479 / 500] average wrong pixels: 0.329797
+Epoch [479 / 500] average reconstruction error: 0.000542
+Epoch [479 / 500] average wrong pixels [validation]: 0.329486
+Epoch [479 / 500] average reconstruction error [validation]: 0.000551
+Epoch [480 / 500] average wrong pixels: 0.329594
+Epoch [480 / 500] average reconstruction error: 0.000561
+Epoch [480 / 500] average wrong pixels [validation]: 0.329287
+Epoch [480 / 500] average reconstruction error [validation]: 0.000551
+Epoch [481 / 500] average wrong pixels: 0.329420
+Epoch [481 / 500] average reconstruction error: 0.000493
+Epoch [481 / 500] average wrong pixels [validation]: 0.329105
+Epoch [481 / 500] average reconstruction error [validation]: 0.000551
+Epoch [482 / 500] average wrong pixels: 0.329193
+Epoch [482 / 500] average reconstruction error: 0.000681
+Epoch [482 / 500] average wrong pixels [validation]: 0.328861
+Epoch [482 / 500] average reconstruction error [validation]: 0.000551
+Epoch [483 / 500] average wrong pixels: 0.328931
+Epoch [483 / 500] average reconstruction error: 0.000526
+Epoch [483 / 500] average wrong pixels [validation]: 0.328579
+Epoch [483 / 500] average reconstruction error [validation]: 0.000551
+Epoch [484 / 500] average wrong pixels: 0.328691
+Epoch [484 / 500] average reconstruction error: 0.000488
+Epoch [484 / 500] average wrong pixels [validation]: 0.328321
+Epoch [484 / 500] average reconstruction error [validation]: 0.000551
+Epoch [485 / 500] average wrong pixels: 0.328380
+Epoch [485 / 500] average reconstruction error: 0.000571
+Epoch [485 / 500] average wrong pixels [validation]: 0.327896
+Epoch [485 / 500] average reconstruction error [validation]: 0.000551
+Epoch [486 / 500] average wrong pixels: 0.328005
+Epoch [486 / 500] average reconstruction error: 0.000593
+Epoch [486 / 500] average wrong pixels [validation]: 0.327004
+Epoch [486 / 500] average reconstruction error [validation]: 0.000551
+Epoch [487 / 500] average wrong pixels: 0.326988
+Epoch [487 / 500] average reconstruction error: 0.000662
+Epoch [487 / 500] average wrong pixels [validation]: 0.326632
+Epoch [487 / 500] average reconstruction error [validation]: 0.000551
+Epoch [488 / 500] average wrong pixels: 0.326781
+Epoch [488 / 500] average reconstruction error: 0.000513
+Epoch [488 / 500] average wrong pixels [validation]: 0.326537
+Epoch [488 / 500] average reconstruction error [validation]: 0.000551
+Epoch [489 / 500] average wrong pixels: 0.326693
+Epoch [489 / 500] average reconstruction error: 0.000500
+Epoch [489 / 500] average wrong pixels [validation]: 0.326411
+Epoch [489 / 500] average reconstruction error [validation]: 0.000551
+Epoch [490 / 500] average wrong pixels: 0.326534
+Epoch [490 / 500] average reconstruction error: 0.000504
+Epoch [490 / 500] average wrong pixels [validation]: 0.326249
+Epoch [490 / 500] average reconstruction error [validation]: 0.000551
+Epoch [491 / 500] average wrong pixels: 0.326379
+Epoch [491 / 500] average reconstruction error: 0.000574
+Epoch [491 / 500] average wrong pixels [validation]: 0.326099
+Epoch [491 / 500] average reconstruction error [validation]: 0.000551
+Epoch [492 / 500] average wrong pixels: 0.326219
+Epoch [492 / 500] average reconstruction error: 0.000491
+Epoch [492 / 500] average wrong pixels [validation]: 0.325912
+Epoch [492 / 500] average reconstruction error [validation]: 0.000551
+Epoch [493 / 500] average wrong pixels: 0.326062
+Epoch [493 / 500] average reconstruction error: 0.000524
+Epoch [493 / 500] average wrong pixels [validation]: 0.325747
+Epoch [493 / 500] average reconstruction error [validation]: 0.000551
+Epoch [494 / 500] average wrong pixels: 0.325886
+Epoch [494 / 500] average reconstruction error: 0.000460
+Epoch [494 / 500] average wrong pixels [validation]: 0.325597
+Epoch [494 / 500] average reconstruction error [validation]: 0.000551
+Epoch [495 / 500] average wrong pixels: 0.325722
+Epoch [495 / 500] average reconstruction error: 0.000499
+Epoch [495 / 500] average wrong pixels [validation]: 0.325405
+Epoch [495 / 500] average reconstruction error [validation]: 0.000551
+Epoch [496 / 500] average wrong pixels: 0.325531
+Epoch [496 / 500] average reconstruction error: 0.000499
+Epoch [496 / 500] average wrong pixels [validation]: 0.325238
+Epoch [496 / 500] average reconstruction error [validation]: 0.000551
+Epoch [497 / 500] average wrong pixels: 0.325375
+Epoch [497 / 500] average reconstruction error: 0.000536
+Epoch [497 / 500] average wrong pixels [validation]: 0.325036
+Epoch [497 / 500] average reconstruction error [validation]: 0.000551
+Epoch [498 / 500] average wrong pixels: 0.325185
+Epoch [498 / 500] average reconstruction error: 0.000478
+Epoch [498 / 500] average wrong pixels [validation]: 0.324865
+Epoch [498 / 500] average reconstruction error [validation]: 0.000551
+Epoch [499 / 500] average wrong pixels: 0.324975
+Epoch [499 / 500] average reconstruction error: 0.000474
+Epoch [499 / 500] average wrong pixels [validation]: 0.324662
+Epoch [499 / 500] average reconstruction error [validation]: 0.000551
+Epoch [500 / 500] average wrong pixels: 0.324772
+Epoch [500 / 500] average reconstruction error: 0.000546
+Epoch [500 / 500] average wrong pixels [validation]: 0.324472
+Epoch [500 / 500] average reconstruction error [validation]: 0.000551
+Training End...

@@ -1,0 +1,65 @@
+Counter({1: 1299, 0: 1201})
+torch.Size([252, 1, 32, 32]) torch.Size([252, 1, 16])
+torch.Size([252, 6]) torch.Size([252, 6])
+(252, 6) (252, 6)
+torch.Size([2500, 1, 32, 32]) torch.Size([2500, 1, 16])
+torch.Size([2500, 6]) torch.Size([2500, 6])
+(2500, 6) (2500, 6)
+Normal as test.
+Test set size:  1000
+Mean correlations:  [0.995 0.978 0.952 0.906 0.817 0.631]
+acc:  0.723
+
+Abormal as test.
+Test set size:  1000
+Mean correlations:  [0.956 0.872 0.758 0.589 0.371 0.134]
+acc:  0.841
+
+False Alarm Rate:  0.28
+Mis-Detection Rate:  0.16
+F1:  0.794145420207743
+
+Mixed as test.
+Test set size:  1000
+Mean correlations:  [0.993 0.973 0.931 0.852 0.701 0.425]
+acc:  0.009
+Merged...
+Bootstrap mean:  5.496948448222647
+Normal as test.
+Test set size:  1000
+Mean correlations:  5.279
+acc:  0.882
+
+Abormal as test.
+Test set size:  1000
+Mean correlations:  3.68
+acc:  1.0
+
+False Alarm Rate:  0.12
+Mis-Detection Rate:  0.0
+F1:  0.9442870632672333
+
+Mixed as test.
+Test set size:  1000
+Mean correlations:  4.875
+acc:  0.571
+Baseline...
+Test set:  Counter({1: 1299, 0: 1201})
+Test ACC: 0.9076
+Test - Truth: {1: 1299, 0: 1201}
+Test - Predictions: {1: 1084, 0: 1416}
+Test - Confusion Matrix: 
+[[1193    8]
+ [ 223 1076]]
+
+Test - False Alarm: 0.0067
+Test - Mis-Detection: 0.1717
+[0.16 0.01 0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.
+ 0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.  ]
+[0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.
+ 0.   0.01 0.02 0.05 0.11 0.24 0.41 0.62 0.82 0.94 0.99]
+[0.93 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.
+ 1.   1.   0.99 0.98 0.94 0.86 0.74 0.55 0.31 0.11 0.01]
+0.01
+0.17
+0.86

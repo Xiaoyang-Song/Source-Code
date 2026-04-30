@@ -1,0 +1,27 @@
+DCCA training logs
+================================================================================
+Command: run/main_dcca_normal.py --dset=1Dr-4B-4D_aa_100_100 --lr=0.0005 --n_epochs=100 --bsz_tri=8 --bsz_val=8 --h=6 --n_log=1 --tag=h=6 --ct_ckpt_name=0-h=6 --regularize
+================================================================================
+Namespace(dset='1Dr-4B-4D_aa_100_100', regularize=True, GL=False, h=6, lr=0.0005, lr_step=1000, n_epochs=100, bsz_tri=8, bsz_val=8, tv_ratio=0.2, ckpt_name=None, ct_ckpt_name='0-h=6', sp_ckpt_name=None, n_log=1, tag='h=6')
+================================================================================
+================================================================================
+-- Current Device: NVIDIA RTX A4000
+-- Device Total Memory: 15.99 GB
+-- Let's use 1 GPUs!
+================================================================================
+
+================================================================================
+Experiment Configuration
+>> Dataset: 1Dr-4B-4D_aa_100_100
+>> Learning rate: 0.0005
+>> Learning rate scheduler step: 1000
+>> Max epochs: 100
+>> Batch size (tri): 8
+>> Batch size (val): 8
+>> Train-Val Ratio: 0.2
+>> Pretrained checkpoint: None
+>> File identifier: h=6
+================================================================================
+
+================================================================================
+Datast Loading

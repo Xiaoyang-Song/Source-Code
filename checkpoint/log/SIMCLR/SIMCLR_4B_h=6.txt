@@ -1,0 +1,40 @@
+SIMCLR training logs
+================================================================================
+Command: run/main_dl_baseline.py --dset=4B --lr=0.001 --flag=SIMCLR --n_epochs=100 --bsz_tri=8 --bsz_val=8 --h=6 --normalize --n_log=1 --tag=h=6
+================================================================================
+Namespace(dset=['4B'], normalize=True, GL=False, flag='SIMCLR', h=6, lr=0.001, lr_step=1000, n_epochs=100, bsz_tri=8, bsz_val=8, tv_ratio=0.2, n_log=1, tag='h=6')
+================================================================================
+================================================================================
+-- Current Device: NVIDIA RTX A4000
+-- Device Total Memory: 15.99 GB
+-- Let's use 1 GPUs!
+================================================================================
+================================================================================
+Datast Loading
+------------------------------------------------------------
+Reading data...
+>> Reading part 4B...
+---- Spectra Shape: (2038, 6759)
+------------------------------------------------------------
+------------------------------------------------------------
+Processing data
+>> Locating active signals for part 4B.
+---- The length of active signals is: 681
+---- S: [ 246. 2955. 5664.]
+---- E: [ 927. 3637. 6346.]
+---- Processed signal shape: (2038, 681, 3)
+------------------------------------------------------------
+------------------------------------------------------------
+Gathering data from different parts
+>> Gathering part 4B...
+---- Spectra Shape: torch.Size([681, 32, 3])
+>> Finished gathering data from parts ['4B'].
+---- 681 spectra windows of size 5 in total.
+---- Data shape: (681, 32, 3)
+Reading part 4B...
+Number of samples: 4751
+Finished gathering data from parts ['4B'].
+4751 CT scan images in total.
+Training SIMCL...
+Training End...
+================================================================================

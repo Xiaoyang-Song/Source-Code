@@ -1,0 +1,44 @@
+torch.Size([2500, 1, 32, 32]) torch.Size([2500, 1, 16])
+Counter({0: 1257, 1: 1243})
+No Spectra encoder checkpoints loaded.
+No CT scan encoder checkpoints loaded.
+Epoch 99  | Train Loss: -1.97976 | Corr: 1.97976
+Epoch 99  | Eval Loss: -1.92716 | Corr: 1.92716
+Epoch 199 | Train Loss: -1.99227 | Corr: 1.99227
+Epoch 199 | Eval Loss: -1.94451 | Corr: 1.94451
+Epoch 299 | Train Loss: -1.99006 | Corr: 1.99006
+Epoch 299 | Eval Loss: -1.94320 | Corr: 1.94320
+Epoch 399 | Train Loss: -1.99491 | Corr: 1.99491
+Epoch 399 | Eval Loss: -1.94839 | Corr: 1.94839
+Epoch 499 | Train Loss: -1.99228 | Corr: 1.99228
+Epoch 499 | Eval Loss: -1.94382 | Corr: 1.94382
+Epoch 599 | Train Loss: -1.99701 | Corr: 1.99701
+Epoch 599 | Eval Loss: -1.95566 | Corr: 1.95566
+Epoch 699 | Train Loss: -1.99808 | Corr: 1.99808
+Epoch 699 | Eval Loss: -1.95788 | Corr: 1.95788
+Epoch 799 | Train Loss: -1.99787 | Corr: 1.99787
+Epoch 799 | Eval Loss: -1.95102 | Corr: 1.95102
+Epoch 899 | Train Loss: -1.99937 | Corr: 1.99937
+Epoch 899 | Eval Loss: -1.95667 | Corr: 1.95667
+Epoch 999 | Train Loss: -1.99928 | Corr: 1.99928
+Epoch 999 | Eval Loss: -1.95388 | Corr: 1.95388
+Epoch 1099 | Train Loss: -1.99874 | Corr: 1.99874
+Epoch 1099 | Eval Loss: -1.95305 | Corr: 1.95305
+Epoch 1199 | Train Loss: -1.99936 | Corr: 1.99936
+Epoch 1199 | Eval Loss: -1.95316 | Corr: 1.95316
+Epoch 1299 | Train Loss: -1.99940 | Corr: 1.99940
+Epoch 1299 | Eval Loss: -1.95131 | Corr: 1.95131
+Epoch 1399 | Train Loss: -2.00006 | Corr: 2.00006
+Epoch 1399 | Eval Loss: -1.95581 | Corr: 1.95581
+Epoch 1499 | Train Loss: -1.99986 | Corr: 1.99986
+Epoch 1499 | Eval Loss: -1.95461 | Corr: 1.95461
+Epoch 1599 | Train Loss: -1.99988 | Corr: 1.99988
+Epoch 1599 | Eval Loss: -1.95112 | Corr: 1.95112
+Epoch 1699 | Train Loss: -1.99890 | Corr: 1.99890
+Epoch 1699 | Eval Loss: -1.95168 | Corr: 1.95168
+Epoch 1799 | Train Loss: -2.00011 | Corr: 2.00011
+Epoch 1799 | Eval Loss: -1.95238 | Corr: 1.95238
+Epoch 1899 | Train Loss: -2.00015 | Corr: 2.00015
+Epoch 1899 | Eval Loss: -1.95287 | Corr: 1.95287
+Epoch 1999 | Train Loss: -1.99935 | Corr: 1.99935
+Epoch 1999 | Eval Loss: -1.94630 | Corr: 1.94630

@@ -1,0 +1,267 @@
+DCCA training logs
+================================================================================
+Command: run/main_dcca.py --dset=1Dr, 4D --lr=0.00005 --n_epochs=100 --bsz_tri=8 --bsz_val=8 --h=6 --normalize --n_log=1 --tag=1_h=6 --ct_ckpt_name=1Dr-4D_1-h=6
+================================================================================
+Namespace(dset=['1Dr', '4D'], normalize=True, GL=False, h=6, lr=5e-05, lr_step=1000, n_epochs=100, bsz_tri=8, bsz_val=8, tv_ratio=0.2, ckpt_name=None, ct_ckpt_name='1Dr-4D_1-h=6', sp_ckpt_name=None, n_log=1, tag='1_h=6')
+================================================================================
+================================================================================
+-- Current Device: NVIDIA RTX A4000
+-- Device Total Memory: 15.99 GB
+-- Let's use 1 GPUs!
+================================================================================
+
+================================================================================
+Experiment Configuration
+>> Dataset: ['1Dr', '4D']
+>> Learning rate: 5e-05
+>> Learning rate scheduler step: 1000
+>> Max epochs: 100
+>> Batch size (tri): 8
+>> Batch size (val): 8
+>> Train-Val Ratio: 0.2
+>> Pretrained checkpoint: None
+>> File identifier: 1_h=6
+================================================================================
+
+================================================================================
+Datast Loading
+------------------------------------------------------------
+Reading data...
+>> Reading part 1Dr...
+---- Spectra Shape: (2038, 7376)
+>> Reading part 4D...
+---- Spectra Shape: (2038, 6859)
+------------------------------------------------------------
+------------------------------------------------------------
+Processing data
+>> Locating active signals for part 1Dr.
+---- The length of active signals is: 942
+---- S: [ 272. 3252. 6221.]
+---- E: [1225. 4194. 7175.]
+---- Processed signal shape: (2038, 942, 3)
+>> Locating active signals for part 4D.
+---- The length of active signals is: 682
+---- S: [ 223. 2932. 5642.]
+---- E: [ 905. 3614. 6324.]
+---- Processed signal shape: (2038, 682, 3)
+------------------------------------------------------------
+------------------------------------------------------------
+Gathering data from different parts
+>> Gathering part 1Dr...
+---- Spectra Shape: torch.Size([942, 32, 3])
+>> Gathering part 4D...
+---- Spectra Shape: torch.Size([682, 32, 3])
+>> Finished gathering data from parts ['1Dr', '4D'].
+---- 1624 spectra windows of size 5 in total.
+---- Data shape: (1624, 32, 3)
+Reading part 1Dr...
+Number of samples: 4046
+Reading part 4D...
+Number of samples: 3901
+Finished gathering data from parts ['1Dr', '4D'].
+7947 CT scan images in total.
+>> No Spectra encoder checkpoints loaded.
+>> CT scan encoder checkpoint 1Dr-4D_1-h=6 loaded successfully!
+>> No DCCA checkpoints loaded.
+Epoch 0   | Train Loss: -0.66738 | Corr: 0.66738
+Epoch 0   | Eval Loss: -0.95342 | Corr: 0.95342
+Epoch 1   | Train Loss: -1.00821 | Corr: 1.00821
+Epoch 1   | Eval Loss: -1.11051 | Corr: 1.11051
+Epoch 2   | Train Loss: -1.29063 | Corr: 1.29063
+Epoch 2   | Eval Loss: -1.38996 | Corr: 1.38996
+Epoch 3   | Train Loss: -1.64219 | Corr: 1.64219
+Epoch 3   | Eval Loss: -1.91110 | Corr: 1.91110
+Epoch 4   | Train Loss: -2.09381 | Corr: 2.09381
+Epoch 4   | Eval Loss: -2.11111 | Corr: 2.11111
+Epoch 5   | Train Loss: -2.34669 | Corr: 2.34669
+Epoch 5   | Eval Loss: -2.53204 | Corr: 2.53204
+Epoch 6   | Train Loss: -2.60937 | Corr: 2.60937
+Epoch 6   | Eval Loss: -2.77456 | Corr: 2.77456
+Epoch 7   | Train Loss: -2.80087 | Corr: 2.80087
+Epoch 7   | Eval Loss: -3.08721 | Corr: 3.08721
+Epoch 8   | Train Loss: -2.96142 | Corr: 2.96142
+Epoch 8   | Eval Loss: -3.29997 | Corr: 3.29997
+Epoch 9   | Train Loss: -3.21925 | Corr: 3.21925
+Epoch 9   | Eval Loss: -3.34909 | Corr: 3.34909
+Epoch 10  | Train Loss: -3.39489 | Corr: 3.39489
+Epoch 10  | Eval Loss: -3.53810 | Corr: 3.53810
+Epoch 11  | Train Loss: -3.39279 | Corr: 3.39279
+Epoch 11  | Eval Loss: -3.67407 | Corr: 3.67407
+Epoch 12  | Train Loss: -3.46565 | Corr: 3.46565
+Epoch 12  | Eval Loss: -3.52087 | Corr: 3.52087
+Epoch 13  | Train Loss: -3.54165 | Corr: 3.54165
+Epoch 13  | Eval Loss: -3.77311 | Corr: 3.77311
+Epoch 14  | Train Loss: -3.61239 | Corr: 3.61239
+Epoch 14  | Eval Loss: -3.74778 | Corr: 3.74778
+Epoch 15  | Train Loss: -3.55989 | Corr: 3.55989
+Epoch 15  | Eval Loss: -3.44237 | Corr: 3.44237
+Epoch 16  | Train Loss: -3.81211 | Corr: 3.81211
+Epoch 16  | Eval Loss: -3.39210 | Corr: 3.39210
+Epoch 17  | Train Loss: -3.65657 | Corr: 3.65657
+Epoch 17  | Eval Loss: -3.78032 | Corr: 3.78032
+Epoch 18  | Train Loss: -3.87005 | Corr: 3.87005
+Epoch 18  | Eval Loss: -3.87902 | Corr: 3.87902
+Epoch 19  | Train Loss: -3.85396 | Corr: 3.85396
+Epoch 19  | Eval Loss: -4.11956 | Corr: 4.11956
+Epoch 20  | Train Loss: -3.72323 | Corr: 3.72323
+Epoch 20  | Eval Loss: -3.83407 | Corr: 3.83407
+Epoch 21  | Train Loss: -3.94423 | Corr: 3.94423
+Epoch 21  | Eval Loss: -3.78659 | Corr: 3.78659
+Epoch 22  | Train Loss: -3.87695 | Corr: 3.87695
+Epoch 22  | Eval Loss: -3.93960 | Corr: 3.93960
+Epoch 23  | Train Loss: -4.01702 | Corr: 4.01702
+Epoch 23  | Eval Loss: -4.00633 | Corr: 4.00633
+Epoch 24  | Train Loss: -3.83036 | Corr: 3.83036
+Epoch 24  | Eval Loss: -4.36064 | Corr: 4.36064
+Epoch 25  | Train Loss: -3.90870 | Corr: 3.90870
+Epoch 25  | Eval Loss: -4.41416 | Corr: 4.41416
+Epoch 26  | Train Loss: -4.09624 | Corr: 4.09624
+Epoch 26  | Eval Loss: -3.89170 | Corr: 3.89170
+Epoch 27  | Train Loss: -3.87971 | Corr: 3.87971
+Epoch 27  | Eval Loss: -3.91441 | Corr: 3.91441
+Epoch 28  | Train Loss: -3.93220 | Corr: 3.93220
+Epoch 28  | Eval Loss: -4.19913 | Corr: 4.19913
+Epoch 29  | Train Loss: -4.05415 | Corr: 4.05415
+Epoch 29  | Eval Loss: -3.93867 | Corr: 3.93867
+Epoch 30  | Train Loss: -4.07557 | Corr: 4.07557
+Epoch 30  | Eval Loss: -4.13099 | Corr: 4.13099
+Epoch 31  | Train Loss: -4.07985 | Corr: 4.07985
+Epoch 31  | Eval Loss: -4.38966 | Corr: 4.38966
+Epoch 32  | Train Loss: -4.12339 | Corr: 4.12339
+Epoch 32  | Eval Loss: -4.10118 | Corr: 4.10118
+Epoch 33  | Train Loss: -4.09662 | Corr: 4.09662
+Epoch 33  | Eval Loss: -3.94810 | Corr: 3.94810
+Epoch 34  | Train Loss: -4.03863 | Corr: 4.03863
+Epoch 34  | Eval Loss: -4.12318 | Corr: 4.12318
+Epoch 35  | Train Loss: -4.18954 | Corr: 4.18954
+Epoch 35  | Eval Loss: -4.18312 | Corr: 4.18312
+Epoch 36  | Train Loss: -4.06921 | Corr: 4.06921
+Epoch 36  | Eval Loss: -4.07226 | Corr: 4.07226
+Epoch 37  | Train Loss: -3.96110 | Corr: 3.96110
+Epoch 37  | Eval Loss: -4.35370 | Corr: 4.35370
+Epoch 38  | Train Loss: -4.21952 | Corr: 4.21952
+Epoch 38  | Eval Loss: -4.05487 | Corr: 4.05487
+Epoch 39  | Train Loss: -4.06996 | Corr: 4.06996
+Epoch 39  | Eval Loss: -4.07200 | Corr: 4.07200
+Epoch 40  | Train Loss: -4.14403 | Corr: 4.14403
+Epoch 40  | Eval Loss: -4.14692 | Corr: 4.14692
+Epoch 41  | Train Loss: -4.22662 | Corr: 4.22662
+Epoch 41  | Eval Loss: -4.33686 | Corr: 4.33686
+Epoch 42  | Train Loss: -4.17421 | Corr: 4.17421
+Epoch 42  | Eval Loss: -4.29770 | Corr: 4.29770
+Epoch 43  | Train Loss: -4.15135 | Corr: 4.15135
+Epoch 43  | Eval Loss: -4.13920 | Corr: 4.13920
+Epoch 44  | Train Loss: -4.26199 | Corr: 4.26199
+Epoch 44  | Eval Loss: -4.08030 | Corr: 4.08030
+Epoch 45  | Train Loss: -4.12891 | Corr: 4.12891
+Epoch 45  | Eval Loss: -4.30492 | Corr: 4.30492
+Epoch 46  | Train Loss: -4.13855 | Corr: 4.13855
+Epoch 46  | Eval Loss: -4.04637 | Corr: 4.04637
+Epoch 47  | Train Loss: -4.14817 | Corr: 4.14817
+Epoch 47  | Eval Loss: -4.14297 | Corr: 4.14297
+Epoch 48  | Train Loss: -4.18242 | Corr: 4.18242
+Epoch 48  | Eval Loss: -4.28247 | Corr: 4.28247
+Epoch 49  | Train Loss: -4.22463 | Corr: 4.22463
+Epoch 49  | Eval Loss: -4.28478 | Corr: 4.28478
+Epoch 50  | Train Loss: -4.15569 | Corr: 4.15569
+Epoch 50  | Eval Loss: -4.53000 | Corr: 4.53000
+Epoch 51  | Train Loss: -4.34208 | Corr: 4.34208
+Epoch 51  | Eval Loss: -3.92299 | Corr: 3.92299
+Epoch 52  | Train Loss: -4.36973 | Corr: 4.36973
+Epoch 52  | Eval Loss: -4.45665 | Corr: 4.45665
+Epoch 53  | Train Loss: -4.19948 | Corr: 4.19948
+Epoch 53  | Eval Loss: -4.38422 | Corr: 4.38422
+Epoch 54  | Train Loss: -4.06749 | Corr: 4.06749
+Epoch 54  | Eval Loss: -4.47423 | Corr: 4.47423
+Epoch 55  | Train Loss: -4.17741 | Corr: 4.17741
+Epoch 55  | Eval Loss: -4.18561 | Corr: 4.18561
+Epoch 56  | Train Loss: -4.21770 | Corr: 4.21770
+Epoch 56  | Eval Loss: -4.54200 | Corr: 4.54200
+Epoch 57  | Train Loss: -4.31847 | Corr: 4.31847
+Epoch 57  | Eval Loss: -4.19439 | Corr: 4.19439
+Epoch 58  | Train Loss: -4.27880 | Corr: 4.27880
+Epoch 58  | Eval Loss: -4.26740 | Corr: 4.26740
+Epoch 59  | Train Loss: -4.39316 | Corr: 4.39316
+Epoch 59  | Eval Loss: -4.76120 | Corr: 4.76120
+Epoch 60  | Train Loss: -4.22311 | Corr: 4.22311
+Epoch 60  | Eval Loss: -4.53069 | Corr: 4.53069
+Epoch 61  | Train Loss: -4.51532 | Corr: 4.51532
+Epoch 61  | Eval Loss: -4.28825 | Corr: 4.28825
+Epoch 62  | Train Loss: -4.35856 | Corr: 4.35856
+Epoch 62  | Eval Loss: -4.50677 | Corr: 4.50677
+Epoch 63  | Train Loss: -4.48935 | Corr: 4.48935
+Epoch 63  | Eval Loss: -4.35136 | Corr: 4.35136
+Epoch 64  | Train Loss: -4.35133 | Corr: 4.35133
+Epoch 64  | Eval Loss: -3.44080 | Corr: 3.44080
+Epoch 65  | Train Loss: -4.36031 | Corr: 4.36031
+Epoch 65  | Eval Loss: -4.52337 | Corr: 4.52337
+Epoch 66  | Train Loss: -4.23714 | Corr: 4.23714
+Epoch 66  | Eval Loss: -4.14698 | Corr: 4.14698
+Epoch 67  | Train Loss: -4.51151 | Corr: 4.51151
+Epoch 67  | Eval Loss: -4.49561 | Corr: 4.49561
+Epoch 68  | Train Loss: -4.58289 | Corr: 4.58289
+Epoch 68  | Eval Loss: -4.71170 | Corr: 4.71170
+Epoch 69  | Train Loss: -4.37515 | Corr: 4.37515
+Epoch 69  | Eval Loss: -4.54961 | Corr: 4.54961
+Epoch 70  | Train Loss: -4.31900 | Corr: 4.31900
+Epoch 70  | Eval Loss: -4.42069 | Corr: 4.42069
+Epoch 71  | Train Loss: -4.45441 | Corr: 4.45441
+Epoch 71  | Eval Loss: -4.34797 | Corr: 4.34797
+Epoch 72  | Train Loss: -4.52678 | Corr: 4.52678
+Epoch 72  | Eval Loss: -4.58904 | Corr: 4.58904
+Epoch 73  | Train Loss: -4.59375 | Corr: 4.59375
+Epoch 73  | Eval Loss: -4.37826 | Corr: 4.37826
+Epoch 74  | Train Loss: -4.32276 | Corr: 4.32276
+Epoch 74  | Eval Loss: -4.85506 | Corr: 4.85506
+Epoch 75  | Train Loss: -4.52974 | Corr: 4.52974
+Epoch 75  | Eval Loss: -4.70371 | Corr: 4.70371
+Epoch 76  | Train Loss: -4.39412 | Corr: 4.39412
+Epoch 76  | Eval Loss: -3.94337 | Corr: 3.94337
+Epoch 77  | Train Loss: -4.53386 | Corr: 4.53386
+Epoch 77  | Eval Loss: -4.35202 | Corr: 4.35202
+Epoch 78  | Train Loss: -4.41176 | Corr: 4.41176
+Epoch 78  | Eval Loss: -4.75722 | Corr: 4.75722
+Epoch 79  | Train Loss: -4.47436 | Corr: 4.47436
+Epoch 79  | Eval Loss: -4.58595 | Corr: 4.58595
+Epoch 80  | Train Loss: -4.38368 | Corr: 4.38368
+Epoch 80  | Eval Loss: -4.79028 | Corr: 4.79028
+Epoch 81  | Train Loss: -4.45442 | Corr: 4.45442
+Epoch 81  | Eval Loss: -4.37445 | Corr: 4.37445
+Epoch 82  | Train Loss: -4.49550 | Corr: 4.49550
+Epoch 82  | Eval Loss: -4.37525 | Corr: 4.37525
+Epoch 83  | Train Loss: -4.51877 | Corr: 4.51877
+Epoch 83  | Eval Loss: -4.45499 | Corr: 4.45499
+Epoch 84  | Train Loss: -4.54733 | Corr: 4.54733
+Epoch 84  | Eval Loss: -4.78809 | Corr: 4.78809
+Epoch 85  | Train Loss: -4.72639 | Corr: 4.72639
+Epoch 85  | Eval Loss: -4.49899 | Corr: 4.49899
+Epoch 86  | Train Loss: -4.50061 | Corr: 4.50061
+Epoch 86  | Eval Loss: -4.44211 | Corr: 4.44211
+Epoch 87  | Train Loss: -4.55715 | Corr: 4.55715
+Epoch 87  | Eval Loss: -4.59183 | Corr: 4.59183
+Epoch 88  | Train Loss: -4.58415 | Corr: 4.58415
+Epoch 88  | Eval Loss: -4.56549 | Corr: 4.56549
+Epoch 89  | Train Loss: -4.64290 | Corr: 4.64290
+Epoch 89  | Eval Loss: -4.39004 | Corr: 4.39004
+Epoch 90  | Train Loss: -4.46185 | Corr: 4.46185
+Epoch 90  | Eval Loss: -4.63427 | Corr: 4.63427
+Epoch 91  | Train Loss: -4.50605 | Corr: 4.50605
+Epoch 91  | Eval Loss: -4.42441 | Corr: 4.42441
+Epoch 92  | Train Loss: -4.43366 | Corr: 4.43366
+Epoch 92  | Eval Loss: -4.51907 | Corr: 4.51907
+Epoch 93  | Train Loss: -4.57679 | Corr: 4.57679
+Epoch 93  | Eval Loss: -4.49902 | Corr: 4.49902
+Epoch 94  | Train Loss: -4.39554 | Corr: 4.39554
+Epoch 94  | Eval Loss: -4.45088 | Corr: 4.45088
+Epoch 95  | Train Loss: -4.58192 | Corr: 4.58192
+Epoch 95  | Eval Loss: -4.75782 | Corr: 4.75782
+Epoch 96  | Train Loss: -4.46193 | Corr: 4.46193
+Epoch 96  | Eval Loss: -4.53704 | Corr: 4.53704
+Epoch 97  | Train Loss: -4.51490 | Corr: 4.51490
+Epoch 97  | Eval Loss: -4.41296 | Corr: 4.41296
+Epoch 98  | Train Loss: -4.64667 | Corr: 4.64667
+Epoch 98  | Eval Loss: -4.66946 | Corr: 4.66946
+Epoch 99  | Train Loss: -4.48164 | Corr: 4.48164
+Epoch 99  | Eval Loss: -4.66355 | Corr: 4.66355
+Training End...
+================================================================================

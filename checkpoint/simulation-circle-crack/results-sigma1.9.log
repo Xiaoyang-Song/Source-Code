@@ -1,0 +1,88 @@
+Likely running on a server
+Counter({1: 2544, 0: 2456})
+Counter({1: 2504, 0: 2496})
+Validation set size: 1964
+torch.Size([1964, 1, 32, 32]) torch.Size([1964, 1, 16])
+torch.Size([1964, 6]) torch.Size([1964, 6])
+(1964, 6) (1964, 6)
+torch.Size([492, 1, 32, 32]) torch.Size([492, 1, 16])
+torch.Size([492, 6]) torch.Size([492, 6])
+(492, 6) (492, 6)
+torch.Size([5000, 1, 32, 32]) torch.Size([5000, 1, 16])
+torch.Size([5000, 6]) torch.Size([5000, 6])
+(5000, 6) (5000, 6)
+Merged Regime...
+Bootstrap sample size:  2000
+Test set size:  2000
+>> Mean correlations:  4.14
+>> Std correlations:  0.547
+
+Normal as test.
+Test set size:  1000
+Mean correlations:  4.13
+acc:  0.931
+
+Abormal as test.
+Test set size:  1000
+Mean correlations:  3.044
+acc:  0.758
+
+False Alarm Rate:  6.9
+Mis-Detection Rate:  24.2
+F1:  82.978
+Baseline...
+Baseline model loaded successfully
+Test set:  Counter({1: 2504, 0: 2496})
+Test ACC: 0.5306
+Test - Truth: {1: 2504, 0: 2496}
+Test - Predictions: {0: 4453, 1: 547}
+Test - Confusion Matrix: 
+[[2301  195]
+ [2152  352]]
+Test - False Alarm: 0.0781
+Test - Mis-Detection: 0.8594
+Start testing windowed data...
+Mean False Alarms: 
+7.720000000000001
+Mean Mis Detections: 
+85.764
+Mean F1: 
+14.091000000000001
+================================================================================
+Hotelling T2
+================================================================================
+DCCA
+Phase I data shape: (1000, 25, 6)
+UCL: 12.60906241866138.
+False Alarms: 
+2.5
+Mis Detections: 
+97.3
+F1: 
+5.133
+================================================================================
+PCA
+PCA Training Shape: torch.Size([2456, 1, 16])
+Explained Variance Ratio: [0.30443618 0.05638854 0.05197636 0.05138355 0.05027899 0.04895356]
+Total Variance Explained: 0.5634171366691589
+Phase I data shape: (1000, 25, 6)
+UCL: 12.60906241866138.
+False Alarms: 
+4.0
+Mis Detections: 
+75.5
+F1: 
+38.132
+================================================================================
+PLS
+PLS CT Training Shape: torch.Size([2456, 1, 32, 32])
+PLS SP Training Shape: torch.Size([2456, 1, 16])
+Reshaped CTs: torch.Size([2456, 1024])
+Phase I data shape: (1000, 25, 6)
+UCL: 12.60906241866138.
+False Alarms: 
+4.0
+Mis Detections: 
+64.2
+F1: 
+51.215999999999994
