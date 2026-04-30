@@ -149,5 +149,5 @@ checkpoint/model/
 events.*
 GL.md
 
-checkpoint/simulation-circle-crack/sensitivity_analysis/
+# checkpoint/simulation-circle-crack/sensitivity_analysis/
 SA_models/

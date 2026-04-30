@@ -1,0 +1,27 @@
+Likely running on a server
+torch.Size([5000, 1, 32, 32]) torch.Size([5000, 1, 16])
+Counter({1: 2544, 0: 2456})
+Training without regularization on abnormal samples...
+1964 492
+No Spectra encoder checkpoints loaded.
+No CT scan encoder checkpoints loaded.
+Epoch 49  | Train Loss: -4.83256 | Corr: 4.83256
+Epoch 49  | Eval Loss: -3.55812 | Corr: 3.55812
+Epoch 99  | Train Loss: -5.70558 | Corr: 5.70558
+Epoch 99  | Eval Loss: -3.71515 | Corr: 3.71515
+Epoch 149 | Train Loss: -5.86397 | Corr: 5.86397
+Epoch 149 | Eval Loss: -3.81356 | Corr: 3.81356
+Epoch 199 | Train Loss: -5.92248 | Corr: 5.92248
+Epoch 199 | Eval Loss: -3.85578 | Corr: 3.85578
+Epoch 249 | Train Loss: -5.95545 | Corr: 5.95545
+Epoch 249 | Eval Loss: -3.84566 | Corr: 3.84566
+Epoch 299 | Train Loss: -5.93777 | Corr: 5.93777
+Epoch 299 | Eval Loss: -3.93225 | Corr: 3.93225
+Epoch 349 | Train Loss: -5.95495 | Corr: 5.95495
+Epoch 349 | Eval Loss: -3.87062 | Corr: 3.87062
+Epoch 399 | Train Loss: -5.96479 | Corr: 5.96479
+Epoch 399 | Eval Loss: -3.93606 | Corr: 3.93606
+Epoch 449 | Train Loss: -5.97667 | Corr: 5.97667
+Epoch 449 | Eval Loss: -3.94686 | Corr: 3.94686
+Epoch 499 | Train Loss: -5.93720 | Corr: 5.93720
+Epoch 499 | Eval Loss: -3.93799 | Corr: 3.93799

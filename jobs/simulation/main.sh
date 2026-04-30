@@ -1,5 +1,6 @@
 #!/bin/bash
-# Sensitivity analysis for window_size and h
+
+# Reproduce main paper results
 
 for sigma in 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0 2.1 2.2 2.3 2.4 2.5
 do
@@ -74,3 +75,5 @@ do
     done
     echo "Finished sigma=$sigma"
 done
+
+python jobs/simulation/plot.py --p-values 6 --n-values 25 --plot-best-baseline
